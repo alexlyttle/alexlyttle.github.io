@@ -79,6 +79,8 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		text-align: center;
+		/* position: relative; */
 	}
 
 		.row > * {
@@ -1548,6 +1550,8 @@ input, select, textarea {
 
 	.image {
 		display: inline-block;
+		text-align: center;
+		position: relative;
 	}
 
 		.image img {
@@ -1580,6 +1584,15 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
+		
+		.image > .text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba(255, 255, 255, 0.45);
+		}
+
 
 /* Button */
 
@@ -1979,7 +1992,7 @@ input, select, textarea {
 			}
 
 			#main > .panel.intro {
-				padding: 0;
+				padding: 25px;
 				height: 20em;
 				display: -moz-flex;
 				display: -webkit-flex;
@@ -2090,6 +2103,11 @@ input, select, textarea {
 					width: 100%;
 				}
 
+					#main > .panel.intro header a {
+						color: black;
+						font-size: 1.25em;
+					}
+
 					#main > .panel.intro header h1 {
 						line-height: 1.25em;
 						margin-bottom: 0;
@@ -2100,7 +2118,7 @@ input, select, textarea {
 						font-size: 1.25em;
 						margin: 0.25em 0 0 0;
 					}
-
+				
 				@media screen and (max-width: 980px) {
 
 					#main > .panel.intro {
@@ -2189,3 +2207,17 @@ input, select, textarea {
 			}
 
 		}
+
+/* Container holding an image and text */
+/* .container {
+	position: relative;
+	text-align: center;
+} */
+  
+/* Centered text */
+/* .centered-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
