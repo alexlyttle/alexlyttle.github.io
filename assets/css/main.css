@@ -2105,7 +2105,8 @@ input, select, textarea {
 
 					#main > .panel.intro header a {
 						color: black;
-						font-size: 1.25em;
+						font-size: 1.8em;
+						line-height: 1.25em;
 					}
 
 					#main > .panel.intro header h1 {
