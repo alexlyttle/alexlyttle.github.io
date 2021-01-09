@@ -1585,13 +1585,22 @@ input, select, textarea {
 				width: auto;
 			}
 		
+		/* Alex Lyttle, 9 Jan 2021 */
+		/* Begin */
 		.image > .text {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			color: rgba(255, 255, 255, 0.45);
+			color:rgba(0, 0, 0, 0.75);
+			font-size: 1.8em;
 		}
+
+		.image > .blur {
+			-webkit-filter: blur(2px);
+			filter: blur(2px);
+		}
+		/* End */
 
 
 /* Button */
@@ -2209,17 +2218,3 @@ input, select, textarea {
 			}
 
 		}
-
-/* Container holding an image and text */
-/* .container {
-	position: relative;
-	text-align: center;
-} */
-  
-/* Centered text */
-/* .centered-text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */

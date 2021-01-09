@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -57,17 +59,53 @@
 									</a>
 								</p>
 								<section>
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#pbjam" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-										</div>
-									</div>
+									<dl>
+										<dt>
+											M. B. Nielsen, G. R. Davies, W. H. Ball, <b>A. J. Lyttle</b> et al., 
+											<i>PBjam: A Python package for automating asteroseismology of solar-like oscillators</i>
+										</dt>
+										<dd>
+											<button onclick="show_element('pbjam-abstract')">Toggle abstract</button>
+											<a href="https://arxiv.org/abs/2012.00580" target="_blank" rel="noopener noreferrer" alt=""><button>arXiv</button></a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201200580N/abstract" target="_blank" rel="noopener noreferrer" alt=""><button>NASA ADS</button></a>
+											<div id="pbjam-abstract" style="display: none;">
+												Asteroseismology is an exceptional tool for studying stars by using the properties of observed modes of oscillation. 
+												So far the process of performing an asteroseismic analysis of a star has remained somewhat esoteric and inaccessible 
+												to non-experts. In this software paper we describe PBjam, an open-source Python package for analyzing the frequency 
+												spectra of solar-like oscillators in a simple but principled and automated way. The aim of PBjam is to provide a set 
+												of easy-to-use tools to extract information about the radial and quadrupole oscillations in stars that oscillate like 
+												the Sun, which may then be used to infer bulk properties such as stellar mass, radius and age or even structure. 
+												Asteroseismology and its data analysis methods are becoming increasingly important as space-based photometric 
+												observatories are producing a wealth of new data, allowing asteroseismology to be applied in a wide range of contexts 
+												such as exoplanet, stellar structure and evolution, and Galactic population studies.
+											</div>
+										</dd>
+										<hr>
+										<dt>
+											B. C. Addison and 86 coauthors including <b>A. J. Lyttle</b>, 
+											<i>TOI-257b (HD 19916b): A Warm sub-Saturn on a Moderately Eccentric Orbit Around an Evolved F-type Star</i>
+										</dt>
+										<dd>
+											<button onclick="show_element('toi257b-abstract')">Toggle abstract</button>
+											<a href="https://arxiv.org/abs/2001.07345" target="_blank" rel="noopener noreferrer" alt=""><button>arXiv</button></a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200107345A/abstract" target="_blank" rel="noopener noreferrer" alt=""><button>NASA ADS</button></a>
+											<div id="toi257b-abstract" style="display: none;">
+												We report the discovery of a warm sub-Saturn, TOI-257b (HD 19916b), based on data from NASA's Transiting Exoplanet Survey
+												Satellite (TESS). The transit signal was detected by TESS and confirmed to be of planetary origin based on radial-velocity 
+												observations with the Minerva-Australis telescope array. An analysis of the TESS photometry, the Minerva-Australis, FEROS,
+												and HARPS radial velocities, and the asteroseismic data of the stellar oscillations reveals that TOI-257b has a mass of 
+												$M_P=0.134^{+0.023}_{-0.022}$$\rm{M_J}$ ($42.6^{+7.3}_{-7.0}$$\rm{M_{\oplus}}$), a radius of $R_P=0.626^{+0.013}_{-0.012}$
+												$\rm{R_J}$ ($7.02^{+0.15}_{-0.13}$$\rm{R_{\oplus}}$), and an orbit with eccentricity $0.242^{+0.040}_{-0.065}$ and period 
+												$18.38827\pm0.00072$$\rm{days}$. TOI-257b orbits a bright ($\mathrm{V}=7.570$mag) somewhat evolved late F-type star with 
+												$M_*=1.390\pm0.046$$\rm{M_{\odot}}$, $R_*=1.888\pm0.033$$\rm{R_{\odot}}$, $T_{\rm eff}=6075\pm90$$\rm{K}$, and 
+												$v\sin{i}=11.3\pm0.5$km/s. Additionally, we statistically validate a second non-transiting sub-Saturn mass planet on a 
+												$\sim71$day orbit using the radial velocity data. This system joins the ranks of a small number of exoplanet host stars 
+												that have been characterized with asteroseismology. Warm sub-Saturns are rare in the known sample of exoplanets, and thus 
+												the discovery of TOI-257b is important in the context of future work studying the formation and migration history of similar 
+												planetary systems.
+											</div>
+										</dd>
+									</dl>
 								</section>
 							</article>
 
@@ -86,20 +124,14 @@
 								<div class="row">
 									<div class="col-4 col-6-medium col-12-small">
 										<a href="#pbjam" class="image fit">
-											<img src="images/pic01.jpg" alt="">
+											<img class="blur" src="images/pbjam.png" alt="">
 											<div class="text">PBjam</div>
 										</a>
 									</div>
 									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit">
-											<img src="images/pic01.jpg" alt="">
-											<div class="text">Text</div>
-										</a>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit">
-											<img src="images/pic01.jpg" alt="">
-											<div class="text">Text</div>
+										<a href="#cartography-styles" class="image fit">
+											<img class="blur" src="images/cartography-styles.png" alt="">
+											<div class="text">CartographY Styles</div>
 										</a>
 									</div>
 								</div>
@@ -111,19 +143,6 @@
 							<header>
 								<h2>Blog</h2>
 							</header>
-							<section>
-								<div class="row">
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#pbjam" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-									</div>
-								</div>
-							</section>
 						</article>
 
 						<!-- PBjam -->
@@ -131,6 +150,15 @@
 							<header>
 								<h2>PBjam</h2>
 							</header>
+							<img class="image featured" src="images/pbjam.png" alt="">
+						</article>
+
+						<!-- CartographY Styles -->
+						<article id="cartography-styles" class="panel">
+							<header>
+								<h2>CartographY Styles</h2>
+							</header>
+							<img class="image featured" src="images/cartography-styles.png" alt="">
 						</article>
 
 						<!-- Contact -->

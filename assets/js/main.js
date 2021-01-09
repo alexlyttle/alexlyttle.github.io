@@ -210,3 +210,22 @@
 		}
 
 })(jQuery);
+
+// Alex Lyttle, 9 Jan 2021
+// Button to show or hide an element with a given "id"
+function show_element(id) {
+	var x = document.getElementById(id);
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
+}
+
+// Alex Lyttle, 9 Jan 2021
+// MathJax configured to use $ as the inline math delimeters
+window.MathJax = {
+	tex: {
+	  inlineMath: [['$', '$'], ['\\(', '\\)']]
+	}
+};
