@@ -1620,7 +1620,7 @@ input, select, textarea {
 		color: #ffffff;
 		border: 0;
 		cursor: pointer;
-		outline: 0;
+		outline: white solid 1px;
 		padding: 0.7em 1.5em 0.7em 1.5em;
 	}
 
