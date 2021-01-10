@@ -223,9 +223,21 @@ function show_element(id) {
 }
 
 // Alex Lyttle, 9 Jan 2021
-// MathJax configured to use $ as the inline math delimeters
+// MathJax configured to use $ as the inline math delimiters
 window.MathJax = {
 	tex: {
 	  inlineMath: [['$', '$'], ['\\(', '\\)']]
 	}
 };
+
+// Alex Lyttle, 10 Jan 2021
+// Counts characters in a text area
+$('textarea').keyup(function() {
+    
+	var characterCount = $(this).val().length,
+		current = $('#current'),
+		maximum = $('#maximum'),
+		theCount = $('#the-count');
+	  
+	current.text(characterCount);
+});

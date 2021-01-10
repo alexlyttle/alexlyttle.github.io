@@ -1486,7 +1486,7 @@ input, select, textarea {
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-		resize: vertical; /* Alex Lyttle, 10 Jan 2021 */
+		resize: vertical; /* Alex Lyttle, 10 Jan 2021 - only vertical resizing allowerd*/
 		min-height: 3.4em; /* Alex Lyttle, 10 Jan 2021 */
 	}
 
@@ -1520,6 +1520,13 @@ input, select, textarea {
 	form :-ms-input-placeholder {
 		color: #999;
 	}
+	
+	/* Alex Lyttle, 10 Jan 2021 - displays character count */
+	form #the-count {
+		float: right;
+		padding: 0.1rem 0 0 0;
+		font-size: 0.875rem;
+	  }
 
 /* Section/Article */
 

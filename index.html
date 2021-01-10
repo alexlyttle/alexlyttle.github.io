@@ -180,7 +180,11 @@
 												<input type="text" name="subject" placeholder="Subject" />
 											</div>
 											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
+												<textarea name="message" placeholder="Message" rows="6" maxlength="1024"></textarea>
+												<div id="the-count">
+													<span id="current">0</span>
+													<span id="maximum">/ 1024</span>
+												</div>
 											</div>
 											<div class="col-12">
 												<input type="submit" value="Send Message" />
