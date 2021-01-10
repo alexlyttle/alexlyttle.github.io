@@ -1486,6 +1486,8 @@ input, select, textarea {
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
+		resize: vertical; /* Alex Lyttle, 10 Jan 2021 */
+		min-height: 3.4em; /* Alex Lyttle, 10 Jan 2021 */
 	}
 
 		form input[type="text"]:focus,
