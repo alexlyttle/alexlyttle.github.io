@@ -12,7 +12,33 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script>
+			MathJax = {
+				tex: {
+					inlineMath: [['$', '$'], ['\\(', '\\)']]
+				}
+			};
+		</script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+		<!-- Scripts for fetching github gist info -->
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script
+		type="application/javascript"
+		src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"
+		></script>
+		<script
+			type="application/javascript"
+			src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
+		></script>
+		<script
+			type="application/javascript"
+			src="https://unpkg.com/@babel/standalone/babel.min.js"
+		></script>
+		<script
+			type="application/javascript"
+			src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"
+		></script>
 	</head>
 	<body class="is-preload">
 
@@ -28,10 +54,10 @@
 						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
 					</nav>
 
-				<!-- Main -->
+					<!-- Main -->
 					<div id="main">
 
-						<!-- Me -->
+							<!-- Me -->
 							<article id="home" class="panel intro">
 								<header>
 									<h1>Alexander J. Lyttle</h1>
@@ -44,7 +70,7 @@
 								<img src="images/profile_oct2020_round.png" alt="profile picture" height="350"/>
 							</article>
 
-						<!-- Publications -->
+							<!-- Publications -->
 							<article id="publications" class="panel">
 								<header>
 									<h2>Publications</h2>
@@ -141,6 +167,29 @@
 							<header>
 								<h2>Blog</h2>
 							</header>
+							<section>
+								<div class="row">
+									<div class="col-4 col-6-medium col-12-small">
+										<a href="#dream-analysis" class="image fit">
+											<img class="blur" src="images/pic09.jpg" alt="">
+											<div class="text">Dream Cheating Analysis</div>
+										</a>
+									</div>
+								</div>
+							</section>
+						</article>
+						
+						<!-- Dream Analysis -->
+						<article id="dream-analysis" class="panel">
+							<header>
+								<h2>Dream Cheating Analysis</h2>
+								<div id="dream-analysis-date"></div>
+							</header>
+							
+							<a href="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3" target="_blank" rel="noopener noreferrer"><img alt="Open GitHub Gist" src="https://img.shields.io/badge/GitHub-Gist-blueviolet"/></a>
+							<a href="https://mybinder.org/v2/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/HEAD" target="_blank" rel="noopener noreferrer"><img alt="Launch with Binder" src="https://mybinder.org/badge_logo.svg"/></a>
+							<a href="https://nbviewer.jupyter.org/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/dream.ipynb" target="_blank" rel="noopener noreferrer"><img alt="Render with nbviewer" src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg"/></a>
+							<script src="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3.js?file=dream.ipynb"></script>
 						</article>
 
 						<!-- PBjam -->
@@ -222,6 +271,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script type="text/jsx" src="index.jsx"></script>
 	</body>
 </html>

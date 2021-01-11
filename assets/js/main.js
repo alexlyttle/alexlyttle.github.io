@@ -226,11 +226,11 @@ function show_abstract(abstract_id, btn) {
 
 // Alex Lyttle, 9 Jan 2021
 // MathJax configured to use $ as the inline math delimiters
-window.MathJax = {
-	tex: {
-	  inlineMath: [['$', '$'], ['\\(', '\\)']]
-	}
-};
+// window.MathJax = {
+// 	tex: {
+// 	  inlineMath: [['$', '$'], ['\\(', '\\)']]
+// 	}
+// };
 
 // Alex Lyttle, 10 Jan 2021
 // Counts characters in a text area
