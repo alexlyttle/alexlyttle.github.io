@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Alexander J. Lyttle</title>
+		<title>Alex Lyttle</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,10 +26,6 @@
 						<a href="#code" class="icon solid fa-laptop"><span>Code</span></a>
 						<a href="#blog" class="icon solid fa-blog"><span>Blog</span></a>
 						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<!-- <a href="https://github.com/alexlyttle" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span>GitHub</span></a>
-						<a href="https://www.linkedin.com/in/alexander-lyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span>Linked In</span></a>
-						<a href="https://twitter.com/_alexlyttle" target="_blank" rel="noopener noreferrer" class="icon brands fa-twitter"><span>Twitter</span></a>
-						<a href="https://www.instagram.com/_alexlyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span>Instagram</span></a> -->
 					</nav>
 
 				<!-- Main -->
@@ -54,21 +50,22 @@
 									<h2>Publications</h2>
 								</header>
 								<p>
-									For a recently updated list of publications, see 
+									Here are a few selected works with links to their listings on <a href="https://arxiv.org/">arXiv</a> and 
+									<a href="https://ui.adsabs.harvard.edu/">NASA ADS</a>. For a complete list of publications, see 
 									<a href="https://orcid.org/0000-0001-8355-8082" target="_blank" rel="noopener noreferrer">
 										Alex's ORCID record <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 									</a>
 								</p>
 								<section>
 									<dl>
-										<dt>
+										<dt id="pbjam-paper">
 											M. B. Nielsen, G. R. Davies, W. H. Ball, <b>A. J. Lyttle</b> et al., 
 											<i>PBjam: A Python package for automating asteroseismology of solar-like oscillators</i>
 										</dt>
 										<dd>
 											<a href="https://arxiv.org/abs/2012.00580" target="_blank" rel="noopener noreferrer" alt=""><button>arXiv</button></a>
 											<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201200580N/abstract" target="_blank" rel="noopener noreferrer" alt=""><button>NASA ADS</button></a>
-											<button onclick="show_element('pbjam-abstract')">Toggle abstract</button>
+											<button onclick="show_abstract('pbjam-abstract', this)">Show abstract</button>
 											<div id="pbjam-abstract" style="display: none;">
 												Asteroseismology is an exceptional tool for studying stars by using the properties of observed modes of oscillation. 
 												So far the process of performing an asteroseismic analysis of a star has remained somewhat esoteric and inaccessible 
@@ -82,14 +79,14 @@
 											</div>
 										</dd>
 										<hr>
-										<dt>
+										<dt id="toi257b-paper">
 											B. C. Addison and 86 coauthors including <b>A. J. Lyttle</b>, 
 											<i>TOI-257b (HD 19916b): A Warm sub-Saturn on a Moderately Eccentric Orbit Around an Evolved F-type Star</i>
 										</dt>
 										<dd>
 											<a href="https://arxiv.org/abs/2001.07345" target="_blank" rel="noopener noreferrer" alt=""><button>arXiv</button></a>
 											<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200107345A/abstract" target="_blank" rel="noopener noreferrer" alt=""><button>NASA ADS</button></a>
-											<button onclick="show_element('toi257b-abstract')">Toggle abstract</button>
+											<button onclick="show_abstract('toi257b-abstract', this)">Show abstract</button>
 											<div id="toi257b-abstract" style="display: none;">
 												We report the discovery of a warm sub-Saturn, TOI-257b (HD 19916b), based on data from NASA's Transiting Exoplanet Survey
 												Satellite (TESS). The transit signal was detected by TESS and confirmed to be of planetary origin based on radial-velocity 
@@ -116,7 +113,7 @@
 								<h2>Code</h2>
 							</header>
 							<p>
-								For all publicly available repositories and project contributions, see 
+								Here is a selection of projects to which I have lead or contributed. For all publicly available repositories and project contributions, see 
 								<a href="https://github.com/alexlyttle" target="_blank" rel="noopener noreferrer">
 									Alex's GitHub profile <img alt="GitHub logo" src="images/GitHub-Mark-32px.png" width="16" height="16" />
 								</a>
@@ -151,7 +148,16 @@
 							<header>
 								<h2>PBjam</h2>
 							</header>
-							<img class="image featured" src="images/pbjam.png" alt="">
+							<p>
+								<code>PBjam</code> is a published, open source Python tool for fast asteroseismology of solar-like oscillators. 
+								It determines the frequencies of oscillation modes for stars with available time series data from missions such as 
+								<em>Kepler</em> and <em>TESS</em>. Alex's contributions are ongoing and include fixing bugs and extensively testing the code.
+							</p>
+							<a href="https://github.com/grd349/PBjam" target="_blank" rel="noopener noreferrer" alt=""><button>Source code</button></a>	
+							<a href="https://pbjam.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer" alt=""><button>Documentation</button></a>	
+							<a href="https://arxiv.org/abs/2012.00580" target="_blank" rel="noopener noreferrer" alt=""><button>arXiv</button></a>
+							<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201200580N/abstract" target="_blank" rel="noopener noreferrer" alt=""><button>NASA ADS</button></a>	
+							<!-- <img class="image featured" src="images/pbjam.png" alt=""> -->
 						</article>
 
 						<!-- CartographY Styles -->
@@ -159,7 +165,12 @@
 							<header>
 								<h2>CartographY Styles</h2>
 							</header>
-							<img class="image featured" src="images/cartography-styles.png" alt="">
+							<p>
+								A collection of light and dark <code>matplotlib</code> styles with a custom, colourblind-friendly colour scheme. This 
+								is intended for use in posters and presentations for the CartographY project.
+							</p>
+							<a href="https://github.com/alexlyttle/cartography-styles" target="_blank" rel="noopener noreferrer" alt=""><button>Source code</button></a>	
+							<!-- <img class="image featured" src="images/cartography-styles.png" alt=""> -->
 						</article>
 
 						<!-- Contact -->

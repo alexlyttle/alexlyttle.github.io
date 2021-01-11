@@ -212,13 +212,15 @@
 })(jQuery);
 
 // Alex Lyttle, 9 Jan 2021
-// Button to show or hide an element with a given "id"
-function show_element(id) {
-	var x = document.getElementById(id);
+// Button function (onClick) to show or hide an element with a given "abstract_id"
+function show_abstract(abstract_id, btn) {
+	var x = document.getElementById(abstract_id);
 	if (x.style.display === "none") {
 	  x.style.display = "block";
+	  btn.innerHTML = "Hide abstract";
 	} else {
 	  x.style.display = "none";
+	  btn.innerHTML = "Show abstract";
 	}
 }
 

@@ -72,6 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* ALex Lyttle, 11 Jan 2021 */
+code {
+	font-family: monospace;
+}
+
 /* Row */
 
 	.row {
