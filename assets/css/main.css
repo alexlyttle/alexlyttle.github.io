@@ -1577,14 +1577,15 @@ code {
 		.image.fit {
 			display: block;
 			width: 100%;
-			/* height: 230px;     /* Alex Lyttle, 12 Jan 2021 */
+			/* Alex Lyttle, 12 Jan 2021 */
 			height: 0;
 			padding-top: 56.25%;
-			overflow: hidden;  /* Alex Lyttle, 12 Jan 2021 */
+			overflow: hidden;
 			border: 1px solid rgba(0, 0, 0, 0.25);
 			border-radius: 10px;
 		}
-
+		
+		/* Alex Lyttle, 12 Jan 2021 */
 		.image.fit:hover {
 			border-color:rgba(0, 0, 0, 0.75);
 		}
