@@ -1493,6 +1493,7 @@ code {
 		transition: background-color .25s ease-in-out;
 		resize: vertical; /* Alex Lyttle, 10 Jan 2021 - only vertical resizing allowerd*/
 		min-height: 3.4em; /* Alex Lyttle, 10 Jan 2021 */
+		border-radius: 5px;
 	}
 
 		form input[type="text"]:focus,
@@ -1576,6 +1577,26 @@ code {
 		.image.fit {
 			display: block;
 			width: 100%;
+			/* height: 230px;     /* Alex Lyttle, 12 Jan 2021 */
+			height: 0;
+			padding-top: 56.25%;
+			overflow: hidden;  /* Alex Lyttle, 12 Jan 2021 */
+			border: 1px solid rgba(0, 0, 0, 0.25);
+			border-radius: 10px;
+		}
+
+		.image.fit:hover {
+			border-color:rgba(0, 0, 0, 0.75);
+		}
+
+		/* Alex Lyttle, 12 Jan 2021 */
+		/* Centers image in container */
+		.image.fit img {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			-ms-transform: translateY(-50%) scale(1.5);
+			transform: translateY(-50%) scale(1.5);			
 		}
 
 		.image.featured {
@@ -1632,10 +1653,11 @@ code {
 		display: inline-block;
 		background-color: #222222;
 		color: #ffffff;
-		border: 0;
+		border: 1px solid white;
 		cursor: pointer;
-		outline: white solid 1px;
+		/* outline: white solid 1px; */
 		padding: 0.7em 1.5em 0.7em 1.5em;
+		border-radius: 5px;
 	}
 
 		input[type="button"]:hover,
