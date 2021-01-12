@@ -1491,8 +1491,9 @@ code {
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-		resize: vertical; /* Alex Lyttle, 10 Jan 2021 - only vertical resizing allowerd*/
-		min-height: 3.4em; /* Alex Lyttle, 10 Jan 2021 */
+		/* Vertical-only resizing and border config - Alex Lyttle, 10 Jan 2021 */
+		resize: vertical;
+		min-height: 3.4em;
 		border-radius: 5px;
 	}
 
@@ -1527,7 +1528,7 @@ code {
 		color: #999;
 	}
 	
-	/* Alex Lyttle, 10 Jan 2021 - displays character count */
+	/* Displays character count - Alex Lyttle, 10 Jan 2021 */
 	form #the-count {
 		float: right;
 		padding: 0.1rem 0 0 0;
@@ -1563,81 +1564,40 @@ code {
 
 /* Image */
 
-	.image {
-		display: inline-block;
-		text-align: center;
-		position: relative;
+.image {
+	display: inline-block;
+}
+
+	.image img {
+		display: block;
+		width: 100%;
 	}
 
-		.image img {
-			display: block;
-			width: 100%;
-		}
+	.image.fit {
+		display: block;
+		width: 100%;
+	}
 
-		.image.fit {
-			display: block;
-			width: 100%;
-			/* Alex Lyttle, 12 Jan 2021 */
-			height: 0;
-			padding-top: 56.25%;
-			overflow: hidden;
-			border: 1px solid rgba(0, 0, 0, 0.25);
-			border-radius: 10px;
-		}
-		
-		/* Alex Lyttle, 12 Jan 2021 */
-		.image.fit:hover {
-			border-color:rgba(0, 0, 0, 0.75);
-		}
+	.image.featured {
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
 
-		/* Alex Lyttle, 12 Jan 2021 */
-		/* Centers image in container */
-		.image.fit img {
-			margin: 0;
-			position: absolute;
-			top: 50%;
-			-ms-transform: translateY(-50%) scale(1.5);
-			transform: translateY(-50%) scale(1.5);			
-		}
+	.image.left {
+		float: left;
+		margin: 0 2em 2em 0;
+	}
 
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
+	.image.centered {
+		display: block;
+		margin: 0 0 2em 0;
+	}
 
-		.image.left {
-			float: left;
-			margin: 0 2em 2em 0;
+		.image.centered img {
+			margin: 0 auto;
+			width: auto;
 		}
-
-		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
-		
-		/* Alex Lyttle, 9 Jan 2021 */
-		/* Begin */
-		.image > .text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color:rgba(0, 0, 0, 0.75);
-			font-size: 1.8em;
-		}
-
-		.image > .blur {
-			-webkit-filter: blur(2px);
-			filter: blur(2px);
-		}
-		/* End */
-
 
 /* Button */
 
@@ -2000,6 +1960,52 @@ code {
 
 		}
 
+/* Tile - Alex Lyttle, 12 Jan 2021 */
+
+	.tile {
+		text-align: center;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 0;
+		padding-top: 56.25%;
+		overflow: hidden;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+	}
+	
+	.tile:hover {
+		border-color:rgba(0, 0, 0, 0.75);
+	}
+
+	.tile img {
+		display: block;
+		width: 100%;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		opacity: 0.33;
+		-ms-transform: translateY(-50%) scale(1.5);
+		transform: translateY(-50%) scale(1.5);
+	}
+	
+	.tile > .text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color:rgba(0, 0, 0, 0.75);
+		font-size: 1.8em;
+	}
+	
+/* iFrame - Alex Lyttle, 11 Jan 2021 */
+
+	iframe {
+		border: none;
+		width: 100%;
+		height: 736px;
+	}
+
 /* Main */
 
 	#main {
@@ -2255,9 +2261,3 @@ code {
 			}
 
 		}
-
-iframe {
-	border: none;
-	width: 100%;
-	height: 736px;
-}
