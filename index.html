@@ -7,13 +7,18 @@
 <html>
 	<head>
 		<title>Alex Lyttle</title>
+	<!-- Meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<!-- Links -->
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="icon" type="image/png" href="/images/favicon-64.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="/images/favicon-32.png" sizes="32x32">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- Stylesheets -->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<!-- MathJax - for displaying LaTeX math -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script>
 			MathJax = {
@@ -23,28 +28,16 @@
 			};
 		</script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-		<!-- Scripts for fetching github gist info -->
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<script
-		type="application/javascript"
-		src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"
-		></script>
-		<script
-			type="application/javascript"
-			src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
-		></script>
-		<script
-			type="application/javascript"
-			src="https://unpkg.com/@babel/standalone/babel.min.js"
-		></script>
-		<script
-			type="application/javascript"
-			src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"
-		></script>
+	<!-- React -->
+		<script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+		<script	type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+	<!-- Babel -->
+		<script	type="application/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<!-- Fetch -->
+		<script	type="application/javascript" src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
 	</head>
 	<body class="is-preload">
-		<!-- Wrapper-->
+	<!-- Wrapper-->
 		<div id="wrapper">
 
 			<!-- Nav -->
@@ -56,10 +49,10 @@
 					<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
 				</nav>
 
-				<!-- Main -->
+			<!-- Main -->
 				<div id="main">
 
-						<!-- Me -->
+					<!-- Me -->
 						<article id="home" class="panel intro">
 							<header>
 								<h1>Alexander J. Lyttle</h1>
@@ -68,11 +61,12 @@
 								<a href="https://www.linkedin.com/in/alexander-lyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"></a>
 								<a href="https://twitter.com/_alexlyttle" target="_blank" rel="noopener noreferrer" class="icon brands fa-twitter"></a>
 								<a href="https://www.instagram.com/_alexlyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"></a>
+								<a href="https://orcid.org/0000-0001-8355-8082" target="_blank" rel="noopener noreferrer" class="icon ai ai-orcid"></a>
 							</header>
 							<img src="images/profile_oct2020_round_350px.png" alt="profile picture"/>
 						</article>
 
-						<!-- Publications -->
+					<!-- Publications -->
 						<article id="publications" class="panel">
 							<header>
 								<h2>Publications</h2>
@@ -112,89 +106,88 @@
 						</article>
 
 					<!-- Code -->
-					<article id="code" class="panel">
-						<header>
-							<h2>Code</h2>
-						</header>
-						<p>
-							Here is a selection of projects to which I have lead or contributed. For all publicly available repositories and project contributions, see <a href="https://github.com/alexlyttle" target="_blank" rel="noopener noreferrer">Alex's GitHub profile<img alt="GitHub mark" src="images/github-mark-32px.png" width="16" height="16" /></a>
-						</p>
-						<section>
-							<div class="row">
-								<div class="col-4 col-6-medium col-12-small">
-									<a href="#pbjam" class="tile">
-										<img src="images/pbjam.png" alt="">
-										<div class="text">PBjam</div>
-									</a>
+						<article id="code" class="panel">
+							<header>
+								<h2>Code</h2>
+							</header>
+							<p>
+								Here is a selection of projects to which I have lead or contributed. For all publicly available repositories and project contributions, see <a href="https://github.com/alexlyttle" target="_blank" rel="noopener noreferrer">Alex's GitHub profile<img alt="GitHub mark" src="images/github-mark-32px.png" width="16" height="16" /></a>
+							</p>
+							<section>
+								<div class="row">
+									<div class="col-4 col-6-medium col-12-small">
+										<a href="#pbjam" class="tile">
+											<img src="images/pbjam.png" alt="">
+											<div class="text">PBjam</div>
+										</a>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<a href="#cartography-styles" class="tile">
+											<img src="images/cartography-styles.png" alt="">
+											<div class="text">CartographY Styles</div>
+										</a>
+									</div>
 								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<a href="#cartography-styles" class="tile">
-										<img src="images/cartography-styles.png" alt="">
-										<div class="text">CartographY Styles</div>
-									</a>
-								</div>
-							</div>
-						</section>
-					</article>
+							</section>
+						</article>
+
+						<!-- PBjam -->
+							<article id="pbjam" class="panel">
+								<header>
+									<h2>PBjam</h2>
+								</header>
+									<a href="https://github.com/grd349/PBjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="Open GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-blueviolet.svg"/></a>	
+									<a href="https://pbjam.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer" alt=""><img alt="View documentation" src="https://readthedocs.org/projects/pbjam/badge/"/></a>		
+									<a href="https://github.com/grd349/PBjam/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" alt=""><img alt="View license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat"/></a>		
+									<a href="https://github.com/grd349/PBjam/issues" target="_blank" rel="noopener noreferrer" alt=""><img alt="View GitHub issues" src="https://img.shields.io/github/issues-closed/grd349/PBjam.svg"/></a>		
+									<a href="https://badge.fury.io/py/pbjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="View latest version in PyPI" src="https://badge.fury.io/py/pbjam.svg"/></a>		
+									<a href="https://travis-ci.com/github/grd349/PBjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="View in Travis CI" src="https://api.travis-ci.com/grd349/PBjam.svg?branch=master"/></a>		
+								<p>
+									<code>PBjam</code> is a published, open source Python tool for fast asteroseismology of solar-like oscillators. It determines the frequencies of oscillation modes for stars with available time series data from missions such as <em>Kepler</em> and <em>TESS</em>. Alex's contributions are ongoing and include fixing bugs and extensively testing the code.
+								</p>
+								<!-- <img class="image featured" src="images/pbjam.png" alt=""> -->
+							</article>
+
+						<!-- CartographY Styles -->
+							<article id="cartography-styles" class="panel">
+								<header>
+									<h2>CartographY Styles</h2>
+								</header>
+								<a href="https://github.com/alexlyttle/cartography-styles" target="_blank" rel="noopener noreferrer" alt=""><img alt="Open GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-blueviolet.svg"/></a>	
+								<p>
+									A collection of light and dark <code>matplotlib</code> styles with a custom, colourblind-friendly colour scheme. This is intended for use in posters and presentations for the CartographY project.
+								</p>
+								<!-- <img class="image featured" src="images/cartography-styles.png" alt=""> -->
+							</article>
 
 					<!-- Blog -->
-					<article id="blog" class="panel">
-						<header>
-							<h2>Blog</h2>
-						</header>
-						<section>
-							<div class="row">
-								<div class="col-4 col-6-medium col-12-small">
-									<a href="#dream-analysis" class="tile">
-										<img src="images/pic09.jpg" alt="">
-										<div class="text">Did Dream cheat?</div>
-									</a>
+						<article id="blog" class="panel">
+							<header>
+								<h2>Blog</h2>
+							</header>
+							<section>
+								<div class="row">
+									<div class="col-4 col-6-medium col-12-small">
+										<a href="#dream-analysis" class="tile">
+											<img src="images/pic09.jpg" alt="">
+											<div class="text">Did Dream cheat?</div>
+										</a>
+									</div>
 								</div>
-							</div>
-						</section>
-					</article>
-					
-					<!-- Dream Analysis -->
-					<article id="dream-analysis" class="panel">
-						<header>
-							<h2>Did Dream cheat?</h2>
-							<div id="dream-analysis-date"></div>
-						</header>
+							</section>
+						</article>
 						
-						<a href="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3" target="_blank" rel="noopener noreferrer"><img alt="Open GitHub Gist" src="https://img.shields.io/badge/GitHub-Gist-blueviolet"/></a>
-						<a href="https://mybinder.org/v2/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/HEAD" target="_blank" rel="noopener noreferrer"><img alt="Launch with Binder" src="https://mybinder.org/badge_logo.svg"/></a>
-						<a href="https://nbviewer.jupyter.org/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/dream.ipynb" target="_blank" rel="noopener noreferrer"><img alt="Render with nbviewer" src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg"/></a>
-						<script src="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3.js?file=dream.ipynb"></script>
-					</article>
-
-					<!-- PBjam -->
-					<article id="pbjam" class="panel">
-						<header>
-							<h2>PBjam</h2>
-						</header>
-							<a href="https://github.com/grd349/PBjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="Open GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-blueviolet.svg"/></a>	
-							<a href="https://pbjam.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer" alt=""><img alt="View documentation" src="https://readthedocs.org/projects/pbjam/badge/"/></a>		
-							<a href="https://github.com/grd349/PBjam/blob/master/LICENSE" target="_blank" rel="noopener noreferrer" alt=""><img alt="View license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat"/></a>		
-							<a href="https://github.com/grd349/PBjam/issues" target="_blank" rel="noopener noreferrer" alt=""><img alt="View GitHub issues" src="https://img.shields.io/github/issues-closed/grd349/PBjam.svg"/></a>		
-							<a href="https://badge.fury.io/py/pbjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="View latest version in PyPI" src="https://badge.fury.io/py/pbjam.svg"/></a>		
-							<a href="https://travis-ci.com/github/grd349/PBjam" target="_blank" rel="noopener noreferrer" alt=""><img alt="View in Travis CI" src="https://api.travis-ci.com/grd349/PBjam.svg?branch=master"/></a>		
-						<p>
-							<code>PBjam</code> is a published, open source Python tool for fast asteroseismology of solar-like oscillators. It determines the frequencies of oscillation modes for stars with available time series data from missions such as <em>Kepler</em> and <em>TESS</em>. Alex's contributions are ongoing and include fixing bugs and extensively testing the code.
-						</p>
-						<!-- <img class="image featured" src="images/pbjam.png" alt=""> -->
-					</article>
-
-					<!-- CartographY Styles -->
-					<article id="cartography-styles" class="panel">
-						<header>
-							<h2>CartographY Styles</h2>
-						</header>
-						<a href="https://github.com/alexlyttle/cartography-styles" target="_blank" rel="noopener noreferrer" alt=""><img alt="Open GitHub repo" src="https://img.shields.io/badge/GitHub-Repo-blueviolet.svg"/></a>	
-						<p>
-							A collection of light and dark <code>matplotlib</code> styles with a custom, colourblind-friendly colour scheme. This is intended for use in posters and presentations for the CartographY project.
-						</p>
-						<!-- <img class="image featured" src="images/cartography-styles.png" alt=""> -->
-					</article>
+						<!-- Did Dream cheat? -->
+							<article id="dream-analysis" class="panel">
+								<header>
+									<h2>Did Dream cheat?</h2>
+									<div id="dream-analysis-date"></div>
+								</header>
+								<a href="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3" target="_blank" rel="noopener noreferrer"><img alt="Open GitHub Gist" src="https://img.shields.io/badge/GitHub-Gist-blueviolet"/></a>
+								<a href="https://mybinder.org/v2/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/HEAD" target="_blank" rel="noopener noreferrer"><img alt="Launch with Binder" src="https://mybinder.org/badge_logo.svg"/></a>
+								<a href="https://nbviewer.jupyter.org/gist/alexlyttle/92b6862286990967cfa9deb5e91df9a3/dream.ipynb" target="_blank" rel="noopener noreferrer"><img alt="Render with nbviewer" src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg"/></a>
+								<script src="https://gist.github.com/alexlyttle/92b6862286990967cfa9deb5e91df9a3.js?file=dream.ipynb"></script>
+							</article>
 
 					<!-- Contact -->
 						<article id="contact" class="panel">

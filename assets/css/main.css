@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
+@import url("academicons.min.css");
 
 /*
 	Astral by HTML5 UP
@@ -1749,7 +1750,7 @@ code {
 
 		}
 
-/* Icons */
+/* Icons (Font Awesome 5) */
 
 	.icon {
 		text-decoration: none;
@@ -1784,6 +1785,11 @@ code {
 
 		.icon > .label {
 			display: none;
+		}
+
+		/* Academicons (AI) implementation - Alex Lyttle, 13 Jan 2021 */
+		.icon.ai:before {
+			font-family: 'Academicons';
 		}
 
 /* Nav */
