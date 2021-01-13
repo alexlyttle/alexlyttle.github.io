@@ -44,4 +44,3 @@ class LatestCommitComponent extends React.Component {
 }
 
 ReactDOM.render(<LatestCommitComponent sha="92b6862286990967cfa9deb5e91df9a3" />, document.getElementById("dream-analysis-date"));
-
