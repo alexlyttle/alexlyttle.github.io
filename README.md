@@ -10,15 +10,17 @@ Template:
 
 Images:
 
-- [Unsplash](unsplash.com)
+- [Unsplash](https://unsplash.com)
 - [PBjam](https://pbjam.readthedocs.io/en/latest/)
 
 Icons:
 
-- [Font Awesome](fontawesome.io)
+- [Font Awesome](https://fontawesome.io)
+- [Academicons](https://jpswalsh.github.io/academicons/)
 
 Other:
 
-- [jQuery](jquery.com)
-- [Responsive Tools](github.com/ajlkn/responsive-tools)
+- [jQuery](https://jquery.com)
+- [Responsive Tools](https://github.com/ajlkn/responsive-tools)
 - [React](https://reactjs.org)
+- [Lazy-loading polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
