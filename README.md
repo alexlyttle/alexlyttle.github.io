@@ -4,9 +4,9 @@ Personal website, [blog](alexlyttle.github.io#blog) and summary of my profession
 
 ## Credits
 
-Template:
+Design:
 
-- Astral by [HTML5 UP](https://html5up.net/)
+- Based on Astral by [HTML5 UP](https://html5up.net/)
 
 Images:
 
