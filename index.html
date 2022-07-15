@@ -11,7 +11,7 @@
 		<link rel="icon" type="image/png" href="/images/favicon-32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="/images/favicon-64.png" sizes="64x64">
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />		
 		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
 		<!-- MathJax - for displaying LaTeX math -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -24,51 +24,77 @@
 		</script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
-	<body>
-		<!-- The sidebar -->
-		<!-- To Do: 
-			- Add menu icon for mobile view
-		-->
-		<div class="sidebar">
-			<img id="logo" src="images/logo.svg" alt="Logo for Alex Lyttle" />
-			<a href="#about">about</a>
-			<a href="#projects">projects</a>
-			<a href="#publications">publications</a>
-			<a href="#contact">contact</a>
-		</div>
+
+	<body onload="onLoad()">
+
+		<!-- Header -->
+		<header>
+			<!-- Button to toggle menu -->
+			<button id="menu-button" class="toggle-button" onclick="toggleNavbar()">
+				<span class="material-symbols-outlined" id="menu-icon">close</span>
+			</button>
+			<!-- Button to toggle theme -->
+			<button id="theme-button" class="toggle-button" onclick="toggleTheme()">
+				<span class="material-symbols-outlined" id="theme-icon"></span>
+			</button>
+		</header>
 		
-		<!-- Page content -->
-		<div class="content">
-			<h1 id="about">about</h1>
-			<div class="section">
+		<!-- Navbar -->
+		<div id="navbar">
+			<!-- <a class="navlink" href="#"><img id="logo" src="images/logo-small.svg" alt="Logo for Alex Lyttle" height=150px/></a> -->
+			<a class="navlink" href="#home">home</a>
+			<a class="navlink" href="#about">about</a>
+			<a class="navlink" href="#projects">projects</a>
+			<a class="navlink" href="#publications">publications</a>
+			<a class="navlink" href="#contact">contact</a>
+		</div>
+
+		<!-- Main content -->
+		<div id="content">
+			<section id="home">
+				<img src="images/profile_oct2020_round_350px.png" alt="Profile picture of Alex Lyttle" width=200px/>
+				<h1>alexander j. lyttle</h1>
+				<p>PhD student (he/him)</p>
+			</section>
+			<section id="about">
+				<h1>about</h1>
 				<p>
 					Alex is an astrophysics PhD student.
 				</p>
-				<img src="images/profile_oct2020_round_350px.png" alt="Profile picture of Alex Lyttle" width=200px/>
-			</div>
-			<h1 id="projects">projects</h1>
-			<h1 id="publications">publications</h1>
-			<h1 id="contact">contact</h1>
+				
+			</section>
+			<section id="projects">
+				<h1>projects</h1>
+			</section>
+			<section id="publications">
+				<h1>publications</h1>
+			</section>
+			<section id="contact">
+				<h1>contact</h1>
+			</section>
 			<div class="footnote">© 2022 Alexander Lyttle</div>
 		</div>
 
 		<!-- Footer -->
-		<div class="footer">
+		<footer>
 			<div class="socials">
 				<a href="https://github.com/alexlyttle" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"></a>
 				<a href="https://www.linkedin.com/in/alexander-lyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"></a>
 				<a href="https://twitter.com/_alexlyttle" target="_blank" rel="noopener noreferrer" class="icon brands fa-twitter"></a>
 				<a href="https://www.instagram.com/_alexlyttle/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"></a>
 			</div>
-			<!-- 2022, Alexander J. Lyttle -->
-		</div>
+		</footer>
+
+		<!-- Splash screen overlay -->
+		<div id="splash"></div>
+		
 		<!-- Scripts -->
-			<!-- <script src="assets/js/loading-attribute-polyfill.min.js"></script> -->
-			<!-- <script src="assets/js/jquery.min.js"></script> -->
-			<!-- <script src="assets/js/browser.min.js"></script> -->
-			<!-- <script src="assets/js/breakpoints.min.js"></script> -->
-			<!-- <script src="assets/js/util.js"></script> -->
-			<!-- <script src="assets/js/main.js"></script> -->
-			<!-- <script src="assets/js/blog_status.js"></script> -->
+		<!-- <script src="assets/js/loading-attribute-polyfill.min.js"></script> -->
+		<!-- <script src="assets/js/jquery.min.js"></script> -->
+		<!-- <script src="assets/js/browser.min.js"></script> -->
+		<!-- <script src="assets/js/breakpoints.min.js"></script> -->
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/main.js"></script>
+		<!-- <script src="assets/js/blog_status.js"></script> -->
 	</body>
 </html>

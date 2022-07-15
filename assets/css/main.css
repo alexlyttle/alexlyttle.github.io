@@ -1,96 +1,134 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
-@import url("academicons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f1f1f1;
-  margin: auto;
-  max-width: 900px;
+  --text-color: black;
+  --primary-color: gray;
+  --secondary-color: #f1f1f1;
+  --accent-color: #82b3eb;
+  --transition-speed: 0.5s;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
-  padding: 20px;
+  margin: auto;
+}
+
+body.dark-theme {
+  --text-color: #f1f1f1;
+  --primary-color: #bbbbbb;
+  --secondary-color: #444444;
+  --accent-color: #82b3eb;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+/* Splash screen to hide transitions */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  transition-delay: 0.3s;
+  transition-duration: 1s;
 }
 
 /* The side navigation menu */
-.sidebar {
-	margin: 0;
-  padding: 10px;
-	width: 200px;
-	background-color: #f1f1f1;
+#navbar {
 	position: fixed;
-	height: 100%;
+  top: 50px;
+  bottom: 50px;
+	width: 200px;
+  height: auto;
+	background-color: var(--secondary-color);
 	overflow: auto;
-  transition: 0.5s;
+  transition: var(--transition-speed);
+  text-align: right;
 }
   
 /* Sidebar links */
-.sidebar a {
+#navbar a.navlink {
   display: block;
-  color: black;
+  color: var(--primary-color);
   padding: 16px;
   text-decoration: none;
 }
 
-/* Active/current link */
-.sidebar a.active {
-  background-color: #364584;
-  color: white;
+/* Active/current link (not yet implemented) */
+#navbar a.navlink.active {
+  color: var(--text-color);
 }
 
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #82b3eb;
-  color: white;
+#navbar a.navlink:hover:not(.active) {
+  color: var(--accent-color);
 }
 
-/* Sidebar logo */
-.sidebar #logo {
+/* Sidebar logo (TODO: is this needed?) */
+#navbar #logo {
   display: block;
   width: 100%;
   margin: auto;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  background-color: white;
-  /* height: 1000px; */
-  margin-left: 220px;
-  margin-bottom: 60px;
+#content {
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+  margin-left: 200px;  /* Change this to be set on page load */
+  margin-bottom: 50px;
   padding: 10px 20px 20px 20px;
-  max-width: 700px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-speed);
 }
 
 .footnote {
   font-size: small;
-  color: gray;
+  color: var(--primary-color);
   text-align: center;
 }
 
-.section {
+section {
   width: auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.section p {
-  flex: 1;
+header {
+  height: 50px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: stretch;
+  transition: var(--transition-speed);
+  position: fixed;
 }
 
-.footer {
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 5px;
-  background-color: #82b3eb;
+  width: 200px;
   height: 50px;
-  color: white;
+  background-color: var(--secondary-color);
   text-align: center;
   display: flex;
+  transition: var(--transition-speed);
 }
 
 .socials {
@@ -98,17 +136,51 @@ div.content {
   max-width: 600px;
   display: flex;
   flex: 1;
+  font-size: x-large;
+  /* align-items: flex-end; */
+  /* vertical-align: bottom; */
 }
 
 .socials a {
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   flex: 1;
-  font-size: xx-large;
 }
 
 .socials a:hover {
-  color: #f1f1f1;
+  color: var(--accent-color);
+}
+
+/* For use in menu and theme toggles */
+button.toggle-button {
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  flex: 1;
+}
+
+button.toggle-button:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+#menu-button {
+  text-align: left;
+}
+
+#theme-button {
+  text-align: right;
+}
+
+/* Google material symbols */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-size: x-large;
+  transition: var(--transition-speed);
 }
 
 /* Icons (Font Awesome 5) */
@@ -153,27 +225,67 @@ div.content {
   font-family: 'Academicons';
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/* On screens that are less than 700px wide, move sidebar to top */
 @media screen and (max-width: 700px) {
   body {
     max-width: 700px;
   }
-  .sidebar {
+  #navbar {
     width: 50%;
     height: auto;
-    position: relative;
     padding: 0 25% 10px 25%;
+    overflow-y: scroll;
+    top: 10vh;
+    max-height: 80vh;
   }
-  .sidebar a {text-align: center}
-  div.content {margin-left: 0; text-align: center;}
-  .section {
-    flex-direction: column;
-    align-items: center;
+
+  #navbar a {text-align: center; font-size: large;}
+  
+  #content {margin-left: 0; margin-right: 0; text-align: center;}
+
+  header {
+    height: 10vh;
+  }
+
+  footer {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .socials {
+    font-size: xx-large;
+  }
+
+  .material-symbols-outlined {
+    font-size: xx-large;
   }
 }
 
+/* If reduced motion prefered, get rid of scroll behavior and transitions */
 @media screen and (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
+
+  body {
+    --transition-speed: 0s;
+  }
+}
+
+/* When the system prefers a dark colour scheme */
+@media (prefers-color-scheme: dark) {
+  /* Avoids flash of light on load if using javascript alone */
+  body {
+    --text-color: #f1f1f1;
+    --primary-color: #bbbbbb;
+    --secondary-color: #444444;
+    --accent-color: #82b3eb;
+  }
+
+  body.light-theme {
+    --text-color: black;
+    --primary-color: gray;
+    --secondary-color: #f1f1f1;
+    --accent-color: #82b3eb;
+  }
 }
