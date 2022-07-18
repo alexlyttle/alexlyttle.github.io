@@ -21,9 +21,9 @@ body {
 
 body.dark-theme {
   --text-color: #f1f1f1;
-  --primary-color: #bbbbbb;
-  --secondary-color: gray;
-  --background-color: #444444;
+  --primary-color: #aaaaaa;
+  --secondary-color: #222222;
+  --background-color: #333333;
   --accent-color: #82b3eb;
 }
 
@@ -252,7 +252,7 @@ form textarea {
   /* border: 1px solid var(--primary-color); */
   border: 0;
   background-color: var(--secondary-color);
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
   width: 100%;
   /* Vertical-only resizing and border config - Alex Lyttle, 10 Jan 2021 */
@@ -270,10 +270,14 @@ form input::placeholder, form textarea::placeholder {
 }
 
 form input[type="submit"] {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   cursor: pointer;
   max-width: 150px;
+}
+
+form  input[type="submit"]:hover {
+	background-color: var(--accent-color);
 }
 
 form #message-count {
@@ -333,9 +337,9 @@ form #message-count {
   /* Avoids flash of light on load if using javascript alone */
   body {
     --text-color: #f1f1f1;
-    --primary-color: #bbbbbb;
-    --secondary-color: gray;
-    --background-color: #444444;
+    --primary-color: #aaaaaa;
+    --secondary-color: #222222;
+    --background-color: #333333;
     --accent-color: #82b3eb;
   }
 
