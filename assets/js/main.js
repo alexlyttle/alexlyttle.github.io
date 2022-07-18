@@ -1,61 +1,46 @@
 // // Alex Lyttle, 9 Jan 2021
 // // Button function (onClick) to show or hide an element with a given "abstract_id"
-// function show_abstract(abstract_id, btn) {
-// 	var x = document.getElementById(abstract_id);
-// 	if (x.style.display === "none") {
-// 	  x.style.display = "block";
-// 	  btn.innerHTML = "Hide abstract";
-// 	} else {
-// 	  x.style.display = "none";
-// 	  btn.innerHTML = "Show abstract";
-// 	}
-// }
+function show_abstract(abstract_id, btn) {
+	const x = document.getElementById(abstract_id);
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	  btn.innerHTML = "Hide abstract";
+	} else {
+	  x.style.display = "none";
+	  btn.innerHTML = "Show abstract";
+	}
+}
 
-// // Alex Lyttle, 10 Jan 2021
-// // Counts characters in a text area
-// $('textarea').keyup(function() {
-    
-// 	var characterCount = $(this).val().length,
-// 		current = $('#current'),
-// 		maximum = $('#maximum'),
-// 		theCount = $('#the-count');
-	  
-// 	current.text(characterCount);
-// });
+const smallWidth = 700;
+const marginLeft = "200px";
+const marginLeftZeropoint = "0px";
 
-const small_width = 700;
-const margin_left = "200px";
-const margin_left_zeropoint = "0px";
 const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-var content = document.getElementById("content");
-var navbar = document.getElementById("navbar");
-var theme_toggle = document.getElementById("theme-icon");
-var nav_elements = document.getElementsByClassName("navlink")
-var menu_toggle = document.getElementById("menu-icon");
+const menuToggle = document.getElementById("menu-icon");
+const themeToggle = document.getElementById("theme-icon");
+const navbar = document.getElementById("navbar");
+const navElements = document.getElementsByClassName("navlink");
+const content = document.getElementById("content");
 
 function showNavbar() {
 	navbar.style.visibility = "visible";
 	navbar.style.opacity = 1;
-	menu_toggle.textContent = "close";
+	menuToggle.textContent = "close";
 	// Only adjust margin-left if window width is large
-	if (window.innerWidth > small_width) {content.style.marginLeft = margin_left}
+	if (window.innerWidth > smallWidth) {content.style.marginLeft = marginLeft}
 }
 
 function hideNavbar() {
 	navbar.style.visibility = "hidden";
 	navbar.style.opacity = 0;
-	menu_toggle.textContent = "menu";
-	if (window.innerWidth > small_width) {content.style.marginLeft = margin_left_zeropoint}
+	menuToggle.textContent = "menu";
+	if (window.innerWidth > smallWidth) {content.style.marginLeft = marginLeftZeropoint}
 }
 
 // Show or hide navbar
 function toggleNavbar() {
-	if (navbar.style.visibility === "hidden") {
-		showNavbar()
-	} else {
-		hideNavbar()
-	}
+	if (navbar.style.visibility === "hidden") {showNavbar()} else {hideNavbar()}
 }
 
 // Toggle between dark and light theme
@@ -63,18 +48,18 @@ function toggleTheme() {
 	if (prefersDarkTheme.matches) {
 		if (document.body.classList.contains("light-theme")) {
 	  		document.body.classList.remove("light-theme");
-			theme_toggle.textContent = "light_mode";
+			themeToggle.textContent = "light_mode";
 		} else {
 			document.body.classList.add("light-theme");
-			theme_toggle.textContent = "dark_mode";
+			themeToggle.textContent = "dark_mode";
 		}
 	} else {
 		if (document.body.classList.contains("dark-theme")) {
 			document.body.classList.remove("dark-theme");
-		  theme_toggle.textContent = "dark_mode";
+		  themeToggle.textContent = "dark_mode";
 	  } else {
 		  document.body.classList.add("dark-theme");
-		  theme_toggle.textContent = "light_mode";
+		  themeToggle.textContent = "light_mode";
 	  }
 	}
 }
@@ -83,30 +68,30 @@ function toggleTheme() {
 // E.g. save prefersDarkTheme (system settings) and then override with user preference
 function setTheme() {	
 	if (prefersDarkTheme.matches) {
-		theme_toggle.textContent = "light_mode";
+		themeToggle.textContent = "light_mode";
 	} else {
-		theme_toggle.textContent = "dark_mode";
+		themeToggle.textContent = "dark_mode";
 	}
 }
 
 // Add margin to main content when window size changes
 function resizeContent() {
-	if (window.innerWidth > small_width) {
+	if (window.innerWidth > smallWidth) {
 		// Only resize margin if navbar is visible
-		if (navbar.style.visibility === "visible") {content.style.marginLeft = margin_left}
+		if (navbar.style.visibility === "visible") {content.style.marginLeft = marginLeft}
 	} else {
-		content.style.marginLeft = margin_left_zeropoint;
+		content.style.marginLeft = marginLeftZeropoint;
 	}
 }
 
 function hideNavbarIfSmall() {
-	if (window.innerWidth < small_width) {hideNavbar()}
+	if (window.innerWidth < smallWidth) {hideNavbar()}
 }
 
 function onLoad() {
 	setTheme();
-	if (window.innerWidth < small_width) {hideNavbar()}
-	var splash = document.getElementById("splash");
+	if (window.innerWidth < smallWidth) {hideNavbar()}
+	const splash = document.getElementById("splash");
 	splash.style.visibility = "hidden";
 	splash.style.opacity = 0;
 }
@@ -114,6 +99,23 @@ function onLoad() {
 window.addEventListener('resize', resizeContent)
 prefersDarkTheme.addEventListener('change', setTheme)  // If user changes system theme, update theme
 
-for (var i = 0; i < nav_elements.length; i++) {
-    nav_elements[i].addEventListener('click', hideNavbarIfSmall, false);
+for (let i = 0; i < navElements.length; i++) {
+    navElements[i].addEventListener('click', hideNavbarIfSmall, false);
 }
+
+// // Alex Lyttle, 10 Jan 2021
+// // Counts characters in a text area
+const textarea = document.getElementById("form-textarea");
+const messageCount = document.getElementById("message-count");
+
+textarea.addEventListener("input", event => {
+	const maxLength = textarea.getAttribute("maxlength");
+	const currentLength = textarea.value.length;
+
+	if (currentLength >= maxLength) {
+		return console.log("Maximum character length reached");
+	}
+	const message = `${maxLength - currentLength} characters remaining`
+	messageCount.innerHTML = message;
+	console.log(message);	
+});

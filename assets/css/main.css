@@ -9,10 +9,11 @@ html {
 body {
   --text-color: black;
   --primary-color: gray;
-  --secondary-color: #f1f1f1;
+  --secondary-color: white;
+  --background-color: #f1f1f1;
   --accent-color: #82b3eb;
   --transition-speed: 0.5s;
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   margin: auto;
@@ -21,7 +22,8 @@ body {
 body.dark-theme {
   --text-color: #f1f1f1;
   --primary-color: #bbbbbb;
-  --secondary-color: #444444;
+  --secondary-color: gray;
+  --background-color: #444444;
   --accent-color: #82b3eb;
 }
 
@@ -36,7 +38,7 @@ h1 {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   transition-delay: 0.3s;
   transition-duration: 1s;
 }
@@ -48,7 +50,7 @@ h1 {
   bottom: 50px;
 	width: 200px;
   height: auto;
-	background-color: var(--secondary-color);
+	background-color: var(--background-color);
 	overflow: auto;
   transition: var(--transition-speed);
   text-align: right;
@@ -81,7 +83,7 @@ h1 {
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 #content {
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   min-height: 100vh;
   margin-left: 200px;  /* Change this to be set on page load */
   margin-bottom: 50px;
@@ -101,7 +103,8 @@ h1 {
 }
 
 section {
-  width: auto;
+  width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,7 +115,7 @@ section {
 header {
   height: 50px;
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   display: flex;
   justify-content: stretch;
   transition: var(--transition-speed);
@@ -125,7 +128,7 @@ footer {
   bottom: 0;
   width: 200px;
   height: 50px;
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   text-align: center;
   display: flex;
   transition: var(--transition-speed);
@@ -225,6 +228,59 @@ button.toggle-button:hover {
   font-family: 'Academicons';
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+
+/* form input {
+  margin: 5px 0px;
+  padding: 5px;
+}
+
+form textarea {
+  margin: 5px 0px;
+  padding: 5px;
+} */
+
+form input,
+form select,
+form textarea {
+  /* border: 1px solid var(--primary-color); */
+  border: 0;
+  background-color: var(--secondary-color);
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  /* Vertical-only resizing and border config - Alex Lyttle, 10 Jan 2021 */
+  resize: vertical;
+  /* min-height: 3.4em; */
+  border-radius: 4px;
+  font: inherit;
+  color: var(--text-color);
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: var(--primary-color);
+  /* font-style: italic; */
+  /* font-weight: 200; */
+}
+
+form input[type="submit"] {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  cursor: pointer;
+  max-width: 150px;
+}
+
+form #message-count {
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+  }
+
 /* On screens that are less than 700px wide, move sidebar to top */
 @media screen and (max-width: 700px) {
   body {
@@ -278,14 +334,16 @@ button.toggle-button:hover {
   body {
     --text-color: #f1f1f1;
     --primary-color: #bbbbbb;
-    --secondary-color: #444444;
+    --secondary-color: gray;
+    --background-color: #444444;
     --accent-color: #82b3eb;
   }
 
   body.light-theme {
     --text-color: black;
     --primary-color: gray;
-    --secondary-color: #f1f1f1;
+    --secondary-color: white;
+    --background-color: #f1f1f1;
     --accent-color: #82b3eb;
   }
 }
