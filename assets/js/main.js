@@ -2,13 +2,14 @@
 // // Button function (onClick) to show or hide an element with a given "abstract_id"
 function show_abstract(abstract_id, btn) {
 	const x = document.getElementById(abstract_id);
-	if (x.style.display === "none") {
-	  x.style.display = "block";
-	  btn.innerHTML = "Hide abstract";
-	} else {
+	if (x.style.display !== "none") {
 	  x.style.display = "none";
-	  btn.innerHTML = "Show abstract";
+	//   btn.innerHTML = "expand_less";
+	} else {
+	  x.style.display = "block";
+	//   btn.innerHTML = "expand_more";
 	}
+
 }
 
 const smallWidth = 700;
@@ -119,3 +120,14 @@ textarea.addEventListener("input", event => {
 	messageCount.innerHTML = message;
 	console.log(message);	
 });
+
+function toggleOthers(othersID, btn) {
+	const x = document.getElementById(othersID);
+	if (x.style.display === "none") {
+	  x.style.display = "inline";
+	  btn.innerHTML = "hide others";
+	} else {
+	  x.style.display = "none";
+	  btn.innerHTML = "et al.";
+	}
+}

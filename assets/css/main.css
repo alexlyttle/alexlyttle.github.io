@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
+@import url("academicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,300italic,400italic");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 html {
@@ -25,6 +26,15 @@ body.dark-theme {
   --secondary-color: #222222;
   --background-color: #333333;
   --accent-color: #82b3eb;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
 }
 
 h1 {
@@ -87,12 +97,12 @@ h1 {
   min-height: 100vh;
   margin-left: 200px;  /* Change this to be set on page load */
   margin-bottom: 50px;
-  padding: 10px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
   transition: var(--transition-speed);
 }
 
@@ -103,13 +113,29 @@ h1 {
 }
 
 section {
+  padding-top: 50px;
   width: 100%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+#home {
+  padding: 0;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* text-align: center; */
+  width: 100%;
 }
 
 header {
@@ -120,6 +146,7 @@ header {
   justify-content: stretch;
   transition: var(--transition-speed);
   position: fixed;
+  font-size: x-large;
 }
 
 footer {
@@ -156,13 +183,14 @@ footer {
 
 /* For use in menu and theme toggles */
 button.toggle-button {
-  width: 50px;
+  /* width: 50px; */
   height: 100%;
   background-color: transparent;
   border: none;
   outline: none;
   color: var(--primary-color);
-  flex: 1;
+  font: inherit;
+  /* flex: 1; */
 }
 
 button.toggle-button:hover {
@@ -178,19 +206,63 @@ button.toggle-button:hover {
   text-align: right;
 }
 
+/* .abstract {
+  display: none; 
+  text-align: justify;
+} */
+
+.publication {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.publication .authors {
+  font-size: large;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.publication .sources {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: x-large;
+}
+
+details > summary {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+details > summary:hover {
+  color: var(--accent-color);
+}
+
+details > summary:before {
+  content: "show ";
+}
+
+details[open] > summary:before {
+  content: "hide ";
+}
+
+details.abstract {
+  text-align: justify;
+}
+
 /* Google material symbols */
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-  font-size: x-large;
+  /* font-size: x-large; */
   transition: var(--transition-speed);
+  font-size: inherit;
 }
 
 /* Icons (Font Awesome 5) */
 
 .icon {
-  text-decoration: none;
-  position: relative;
   text-decoration: none;
 }
 
@@ -285,6 +357,11 @@ form #message-count {
   font-size: 0.875rem;
   }
 
+/* Spacer which fills flexbox */
+.flex-spacer {
+  flex: 1;
+}
+
 /* On screens that are less than 700px wide, move sidebar to top */
 @media screen and (max-width: 700px) {
   body {
@@ -305,6 +382,7 @@ form #message-count {
 
   header {
     height: 10vh;
+    font-size: xx-large;
   }
 
   footer {
@@ -316,8 +394,13 @@ form #message-count {
     font-size: xx-large;
   }
 
-  .material-symbols-outlined {
-    font-size: xx-large;
+  section {
+    padding-top: 10vh;
+  }
+
+  #home {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
