@@ -24,6 +24,8 @@ const navbar = document.getElementById("navbar");
 const navElements = document.getElementsByClassName("navlink");
 const content = document.getElementById("content");
 
+let activeNavlink = null;
+
 function showNavbar() {
 	navbar.style.visibility = "visible";
 	navbar.style.opacity = 1;
@@ -97,13 +99,6 @@ function onLoad() {
 	splash.style.opacity = 0;
 }
 
-window.addEventListener('resize', resizeContent)
-prefersDarkTheme.addEventListener('change', setTheme)  // If user changes system theme, update theme
-
-for (let i = 0; i < navElements.length; i++) {
-    navElements[i].addEventListener('click', hideNavbarIfSmall, false);
-}
-
 // // Alex Lyttle, 10 Jan 2021
 // // Counts characters in a text area
 const textarea = document.getElementById("form-textarea");
@@ -130,4 +125,22 @@ function toggleOthers(othersID, btn) {
 	  x.style.display = "none";
 	  btn.innerHTML = "et al.";
 	}
+}
+
+// Add to classlist of navlink when selected
+function activateNavlink() {
+	if (activeNavlink !== this) {
+		if (activeNavlink !== null) {activeNavlink.classList.remove("active")}
+		this.classList.add("active");
+		activeNavlink = this;
+	}
+}
+
+window.addEventListener('resize', resizeContent)
+prefersDarkTheme.addEventListener('change', setTheme)  // If user changes system theme, update theme
+
+// Navbar link main loop
+for (let i = 0; i < navElements.length; i++) {
+    navElements[i].addEventListener('click', hideNavbarIfSmall, false);
+	navElements[i].addEventListener('click', activateNavlink, false);
 }
