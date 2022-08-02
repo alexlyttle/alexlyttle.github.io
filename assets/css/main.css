@@ -159,7 +159,8 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 200px;
+  /* width: 200px; */
+  width: 100%;
   height: var(--header-height);
   background-color: var(--background-color);
   text-align: center;
@@ -168,10 +169,11 @@ footer {
 }
 
 .socials {
-  margin: auto;
-  max-width: 600px;
+  /* margin: auto; */
+  /* max-width: 600px; */
+  width: 200px;
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   font-size: x-large;
   /* align-items: flex-end; */
   /* vertical-align: bottom; */
@@ -220,7 +222,7 @@ button.toggle-button:hover {
 .publication {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  /* text-align: justify; */
   /* scroll-margin-top: var(--header-height); */
 }
 
@@ -262,10 +264,6 @@ details > summary::-webkit-details-marker {
 
 details[open] > summary:before {
   content: "hide ";
-}
-
-details.abstract {
-  text-align: justify;
 }
 
 /* Google material symbols */
@@ -407,17 +405,39 @@ form #message-count {
   }
 
   footer {
-    width: 100%;
     height: var(--header-height);
+	align-items: center;
   }
 
   .socials {
+	width: 100%;
     font-size: xx-large;
+	justify-content: center;
   }
 
   #home {
     flex-direction: column;
     justify-content: center;
+  }
+
+  section {
+    text-align: left;
+  }
+  
+  .publication .sources {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: xx-large;
+  }
+  
+  form input {
+	height: 3.5em;
+  }
+
+  form textarea {
+	padding-top: 1.25em;
   }
 }
 
