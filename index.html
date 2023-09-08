@@ -153,22 +153,40 @@
 						<a title="View arXiv eprint [HTML]" href="https://ar5iv.org/abs/2105.04482" class="material-symbols-outlined" target="_blank" rel="noopener noreferrer">article</a>
 					</div>
 				</div>
-				<!-- delta scuti -->
+				<!-- Delta scuti -->
 				<div class="publication" id="dsct-paper">
 					<h2>Asteroseismology of δ Scuti stars: emulating model grids using a neural network</h2>
 					<p class="authors">
-						O. J. Scutt, S. J. Murphy, ..., and <u>A. J. Lyttle</u> (2022)
+						O. J. Scutt, S. J. Murphy, ..., and <u>A. J. Lyttle</u> (2023)
 					</p>
 					<details class="abstract">
 						<summary>abstract</summary>
 						<p>
-							Grid-based modelling is widely used for estimating stellar parameters. However, stellar model grid is sparse because of the computational cost. This paper demonstrates an application of a machine-learning algorithm using the Gaussian Process (GP) Regression that turns a sparse model grid on to a continuous function. We train GP models to map five fundamental inputs (mass, equivalent evolutionary phase, initial metallicity, initial helium fraction, and the mixing-length parameter) to observable outputs (effective temperature, surface gravity, radius, surface metallicity, and stellar age). We test the GP predictions for the five outputs using off-grid stellar models and find no obvious systematic offsets, indicating good accuracy in predictions. As a further validation, we apply these GP models to characterize 1000 fake stars. Inferred masses and ages determined with GP models well recover true values within one standard deviation. An important consequence of using GP-based interpolation is that stellar ages are more precise than those estimated with the original sparse grid because of the full sampling of fundamental inputs.
+							Young δ Scuti stars have proven to be valuable asteroseismic targets but obtaining robust uncertainties on their inferred properties is challenging. We aim to quantify the random uncertainties in grid-based modelling of δ Sct stars. We apply Bayesian inference using nested sampling and a neural network emulator of stellar models, testing our method on both simulated and real stars. Based on results from simulated stars we demonstrate that our method can recover plausible posterior probability density estimates while accounting for both the random uncertainty from the observations and neural network emulation. We find that the posterior distributions of the fundamental parameters can be significantly non-Gaussian, multi-modal, and have strong covariance. We conclude that our method reliably estimates the random uncertainty in the modelling of δ Sct stars and paves the way for the investigation and quantification of the systematic uncertainty.
 						</p>
 					</details>
 					<div class="sources">
 						<a title="View NASA ADS entry" href="https://ui.adsabs.harvard.edu/abs/2023arXiv230211025S/abstract" class="icon ai ai-ads" target="_blank" rel="noopener noreferrer"></a>
 						<a title="View arXiv eprint [PDF]" href="https://arxiv.org/pdf/2302.11025.pdf" class="material-symbols-outlined" target="_blank" rel="noopener noreferrer">picture_as_pdf</a>
 						<a title="View arXiv eprint [HTML]" href="https://ar5iv.org/abs/2302.11025" class="material-symbols-outlined" target="_blank" rel="noopener noreferrer">article</a>
+					</div>
+				</div>
+				<!-- Radial metalicity gradient -->
+				<div class="publication" id="rad-met-paper">
+					<h2>The evolution of the Milky Way's thin disc radial metallicity gradient with K2 asteroseismic ages</h2>
+					<p class="authors">
+						E. Willett, A. Miglio, ..., <u>A. J. Lyttle</u>, et al. (2023)
+					</p>
+					<details class="abstract">
+						<summary>abstract</summary>
+						<p>
+							The radial metallicity distribution of the Milky Way's disc is an important observational constraint for models of the formation and evolution of our Galaxy. It informs our understanding of the chemical enrichment of the Galactic disc and the dynamical processes therein, particularly radial migration. We investigate how the metallicity changes with guiding radius in the thin disc using a sample of red-giant stars with robust astrometric, spectroscopic and asteroseismic parameters. Our sample contains 668 stars with guiding radii 4 kpc &lt; Rg &lt; 11 kpc and asteroseismic ages covering the whole history of the thin disc with precision ≈ 25%. We use MCMC analysis to measure the gradient and its intrinsic spread in bins of age and construct a hierarchical Bayesian model to investigate the evolution of these parameters independently of the bins. We find a smooth evolution of the gradient from ≈ −0.07 dex/kpc in the youngest stars to ≈−0.04 dex/kpc in stars older than 10 Gyr, with no break at intermediate ages. Our results are consistent with those based on asteroseismic ages from CoRoT, with that found in Cepheid variables for stars younger than 1 Gyr, and with open clusters for stars younger than 6 Gyr. For older stars we find a significantly lower metallicity in our sample than in the clusters, suggesting a survival bias favouring more metal-rich clusters. We also find that the chemical evolution model of Chiappini (2009) is too metal-poor in the early stages of disc formation. Our results provide strong new constraints for the growth and enrichment of the thin disc and radial migration, which will facilitate new tests of model conditions and physics.
+						</p>
+					</details>
+					<div class="sources">
+						<a title="View NASA ADS entry" href="hhttps://ui.adsabs.harvard.edu/abs/2023MNRAS.tmp.2293W/abstract" class="icon ai ai-ads" target="_blank" rel="noopener noreferrer"></a>
+						<a title="View arXiv eprint [PDF]" href="https://arxiv.org/pdf/2307.14422.pdf" class="material-symbols-outlined" target="_blank" rel="noopener noreferrer">picture_as_pdf</a>
+						<a title="View arXiv eprint [HTML]" href="https://ar5iv.org/abs/2307.14422" class="material-symbols-outlined" target="_blank" rel="noopener noreferrer">article</a>
 					</div>
 				</div>
 				<!-- GP augmentation -->
