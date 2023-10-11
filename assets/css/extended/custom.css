@@ -1,0 +1,67 @@
+:root {
+    --theme: rgb(245, 245, 245);
+    --code-bg: rgb(255, 255, 255);
+}
+
+.list {
+    background: var(--theme);
+}
+
+.post-badges {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post-badges img {
+    display: inline;
+}
+
+.post-abstract {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post-type {
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-size: small;
+}
+
+.post-type .button {
+    margin-left: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+/* Apply gradient animation to home */
+
+/* #home {
+    background: linear-gradient(-45deg, #fffc99, #ff8f8f, #997bde, #407fff);
+    background-size: 400% 400%;
+    -moz-animation: gradient 15s ease infinite;
+    -webkit-animation: gradient 15s ease infinite;
+    -ms-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+}
+
+#home.dark {
+    background: linear-gradient(-45deg, #25007a, #2821ad, #133d2a, #06120d);
+    background-size: 400% 400%;
+    -moz-animation: gradient 15s ease infinite;
+    -webkit-animation: gradient 15s ease infinite;
+    -ms-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+} */
+
+/* Gradient animation */
+/* 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
