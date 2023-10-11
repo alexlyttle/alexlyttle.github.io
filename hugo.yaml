@@ -20,3 +20,18 @@ params:
       url: "https://www.instagram.com/_alexlyttle"
     - name: "Email"
       url: "mailto:a.j.lyttle@outlook.com"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about
+      weight: 1
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 2
+    - identifier: publications
+      name: Publications
+      url: /publications/
+      weight: 3
