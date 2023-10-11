@@ -1,0 +1,82 @@
+{{- define "main" }}
+{{ $maxAuthors := 5 }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    {{ partial "post_type.html" . }}
+    <h1 class="post-title">
+      {{ .Title }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1>
+    {{- if .Params.authors }}
+    <p>
+      {{ delimit .Params.authors ", " ", and " }}
+    </p>
+    {{- end }}
+    {{- if (or (isset .Params "bibcode") (isset .Params "doi")) }}
+    <div class="post-badges">
+      {{- if .Params.bibcode }}
+      <a href="https://ui.adsabs.harvard.edu/abs/{{ .Params.bibcode }}"><img src="https://img.shields.io/badge/NASA%20ADS-{{ .Params.bibcode }}-blue" alt="Bibcode {{ .Params.bibcode }}"></a>
+      {{- end }}
+      {{- if .Params.doi }}
+      <a href="https://doi.org/{{ .Params.doi }}"><img src="https://img.shields.io/badge/DOI-{{ .Params.doi }}-red" alt="DOI {{ .Params.doi }}"></a>
+      <a href="https://juleskreuer.eu/projekte/citation-badge/"><img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ .Params.doi }}" alt="DOI {{ .Params.doi }}"></a>
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- if .Params.abstract }}
+    <div class="post-abstract">
+      <h2>Abstract</h2>
+      <p>{{ .Params.abstract }}</p>
+    </div>
+    {{- end }}
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}
