@@ -8,10 +8,12 @@ params:
   defaultTheme: auto
   hideAuthor: true
   ShowBreadCrumbs: true
+  
   profileMode:
     enabled: true
     subtitle: "Postdoctoral Research Fellow &bull; Astrophysics &bull; Statistics"
     imageUrl: "images/profile_oct2020_round_350px.png"
+  
   socialIcons:
     - name: "GitHub"
       url: "https://github.com/alexlyttle"
@@ -23,6 +25,11 @@ params:
       url: "https://www.instagram.com/_alexlyttle"
     - name: "Email"
       url: "mailto:a.j.lyttle@outlook.com"
+
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon16x16.png"
+    favicon32x32: "favicon32x32.png"
 
 menu:
   main:
