@@ -5,6 +5,7 @@ theme: PaperMod
 
 
 params:
+  author: Alexander Lyttle
   defaultTheme: auto
   ShowBreadCrumbs: true
   profileMode:
