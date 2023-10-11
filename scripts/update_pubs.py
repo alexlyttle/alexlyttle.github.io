@@ -98,6 +98,7 @@ def get_metadata(entry: Entry) -> dict:
         "adsnote": get_field(entry, "adsnote"),
         "publication_type": entry.entry_type,
         "bibcode": entry.key,
+        "publishdate": datetime.now().strftime("%Y-%m-%d"),
     }
     return metadata
 

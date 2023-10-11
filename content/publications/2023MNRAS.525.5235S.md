@@ -37,4 +37,5 @@ adsurl: https://ui.adsabs.harvard.edu/abs/2023MNRAS.525.5235S
 adsnote: Provided by the SAO/NASA Astrophysics Data System
 publication_type: article
 bibcode: 2023MNRAS.525.5235S
+publishdate: '2023-10-11'
 ---
