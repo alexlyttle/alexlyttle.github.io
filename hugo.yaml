@@ -3,14 +3,13 @@ languageCode: 'en-gb'
 title: Alexander Lyttle
 theme: PaperMod
 
-
 params:
   author: Alexander Lyttle
   defaultTheme: auto
   ShowBreadCrumbs: true
   profileMode:
     enabled: true
-    subtitle: "Postdoctoral Research Fellow | Astrophysics | Statistics"
+    subtitle: "Postdoctoral Research Fellow &bull; Astrophysics &bull; Statistics"
     imageUrl: "images/profile_oct2020_round_350px.png"
   socialIcons:
     - name: "GitHub"
