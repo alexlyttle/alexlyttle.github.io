@@ -24,9 +24,6 @@ params:
     - name: "Email"
       url: "mailto:a.j.lyttle@outlook.com"
 
-assets:
-  favicon: "favicon.ico"
-
 menu:
   main:
     - identifier: about
