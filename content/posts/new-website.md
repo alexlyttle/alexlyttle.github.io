@@ -1,7 +1,8 @@
 ---
 title: 'New Website'
 date: '2023-10-11T13:37:09+01:00'
-draft: true
+publishdate: '2023-10-12'
+draft: false
 ---
 
 I decided it was about time to refresh my personal website. Last week, I lead a meeting with colleagues about academic websites and how to build your own with GitHub pages (see [notes](https://github.com/alexlyttle/academic-website)). However, I realised that it had been a while since I had updated my own and wanted a change.
