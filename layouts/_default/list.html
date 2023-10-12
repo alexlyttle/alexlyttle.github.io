@@ -72,22 +72,6 @@
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
-    {{- if .Params.authors }}
-    <p>
-      {{- $maxAuthors := 5 }}
-      {{- with .Params.authors }}
-        {{- $authorCount := len . }}
-        {{- range $index, $author := . }}
-          {{- if lt $index $maxAuthors }}
-            {{- if ne $index 0 }}, {{ end }}{{ if (and (eq $authorCount $maxAuthors) (eq $index (sub $authorCount 1))) }}and {{ end }}{{ $author }}
-          {{- else if eq $index $maxAuthors }}
-            et al
-          {{- end -}}
-        {{- end -}}
-        .
-      {{- end -}}
-    </p>
-    {{- end }}
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">

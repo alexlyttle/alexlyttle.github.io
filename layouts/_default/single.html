@@ -8,11 +8,6 @@
       {{ .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
-    {{- if .Params.authors }}
-    <p>
-      {{ delimit .Params.authors ", " ", and " }}.
-    </p>
-    {{- end }}
     {{- if (or (isset .Params "bibcode") (isset .Params "doi")) }}
     <div class="post-badges">
       {{- if .Params.bibcode }}
@@ -22,12 +17,6 @@
       <a href="https://doi.org/{{ .Params.doi }}"><img src="https://img.shields.io/badge/DOI-{{ .Params.doi }}-red" alt="DOI {{ .Params.doi }}"></a>
       <a href="https://juleskreuer.eu/projekte/citation-badge/"><img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ .Params.doi }}" alt="DOI {{ .Params.doi }}"></a>
       {{- end }}
-    </div>
-    {{- end }}
-    {{- if .Params.abstract }}
-    <div class="post-abstract">
-      <h2>Abstract</h2>
-      <p>{{ .Params.abstract }}</p>
     </div>
     {{- end }}
     {{- if .Description }}
