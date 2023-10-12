@@ -1,0 +1,47 @@
+baseURL: 'https://alexlyttle.github.io/'
+languageCode: 'en-gb'
+title: Alexander Lyttle
+theme: PaperMod
+
+params:
+  author: Alexander Lyttle
+  defaultTheme: auto
+  hideAuthor: true
+  ShowBreadCrumbs: true
+  
+  profileMode:
+    enabled: true
+    subtitle: "Postdoctoral Research Fellow &bull; Astrophysics &bull; Statistics"
+    imageUrl: "images/profile_oct2020_round_350px.png"
+  
+  socialIcons:
+    - name: "GitHub"
+      url: "https://github.com/alexlyttle"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/alexander-lyttle"
+    - name: "Twitter"
+      url: "https://twitter.com/_alexlyttle"
+    - name: "Instagram"
+      url: "https://www.instagram.com/_alexlyttle"
+    - name: "Email"
+      url: "mailto:a.j.lyttle@outlook.com"
+
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon16x16.png"
+    favicon32x32: "favicon32x32.png"
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about
+      weight: 1
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 2
+    - identifier: publications
+      name: Publications
+      url: /publications/
+      weight: 3
