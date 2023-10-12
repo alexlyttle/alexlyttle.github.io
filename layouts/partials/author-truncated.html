@@ -1,0 +1,19 @@
+{{- if or .Params.author site.Params.author }}
+{{- $author := (.Params.author | default site.Params.author) }}
+{{- $author_type := (printf "%T" $author) }}
+{{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
+{{- $maxAuthors := 5 }}
+{{- with $author }}
+  {{- $authorCount := len . }}
+  {{- range $index, $author := . }}
+    {{- if lt $index $maxAuthors }}
+      {{- if ne $index 0 }}, {{ end }}{{ if (and (eq $authorCount $maxAuthors) (eq $index (sub $authorCount 1))) }}and {{ end }}{{ $author }}
+    {{- else if eq $index $maxAuthors }}
+      et al
+    {{- end }}
+  {{- end }}.
+{{- end }}
+{{- else }}
+{{- $author }}
+{{- end }}
+{{- end -}}

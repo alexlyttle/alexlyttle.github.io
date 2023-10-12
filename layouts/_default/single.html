@@ -37,7 +37,8 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
+      <!-- Send dict to post_meta to say that this is not a list page -->
+      {{- partial "post_meta.html" (dict "page" . "isList" false) -}}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}

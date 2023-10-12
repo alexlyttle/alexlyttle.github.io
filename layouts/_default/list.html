@@ -96,7 +96,8 @@
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
+    <!-- Send dict to post_meta to say that this is a list page -->
+    {{- partial "post_meta.html" (dict "page" . "isList" true) -}}
   </footer>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
