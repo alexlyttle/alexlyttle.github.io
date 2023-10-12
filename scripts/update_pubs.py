@@ -88,17 +88,17 @@ def get_metadata(entry: Entry) -> dict:
     """Get metadata from bibtex entry."""
     metadata = {
         "title": get_field(entry, "title"),
-        "authors": get_authors(entry),
+        "author": get_authors(entry),
         "date": get_date(entry),
-        "journal": get_field(entry, "journal"),
-        "abstract": get_field(entry, "abstract"),
+        "publishdate": datetime.now().strftime("%Y-%m-%d"),  # This is the date the file was created
+        "description": get_field(entry, "abstract"),
         "tags": get_tags(entry),
+        "journal": get_field(entry, "journal"),
         "doi": get_field(entry, "doi"),
         "adsurl": get_field(entry, "adsurl"),
         "adsnote": get_field(entry, "adsnote"),
         "publication_type": entry.entry_type,
         "bibcode": entry.key,
-        "publishdate": datetime.now().strftime("%Y-%m-%d"),
     }
     return metadata
 

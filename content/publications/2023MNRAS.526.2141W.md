@@ -1,7 +1,7 @@
 ---
 title: The evolution of the Milky Way's thin disc radial metallicity gradient with
   K2 asteroseismic ages
-authors:
+author:
 - Emma Willett
 - Andrea Miglio
 - J. Ted Mackereth
@@ -14,10 +14,10 @@ authors:
 - Giada Casali
 - Valeria Grisoni
 date: '2023-12-01'
-journal: MNRAS
-abstract: "The radial metallicity distribution of the Milky Way's disc is an\n   \
-  \     important observational constraint for models of the formation\n        and\
-  \ evolution of our Galaxy. It informs our understanding of the\n        chemical\
+publishdate: '2023-10-12'
+description: "The radial metallicity distribution of the Milky Way's disc is an\n\
+  \        important observational constraint for models of the formation\n      \
+  \  and evolution of our Galaxy. It informs our understanding of the\n        chemical\
   \ enrichment of the Galactic disc and the dynamical\n        processes therein,\
   \ particularly radial migration. We investigate\n        how the metallicity changes\
   \ with guiding radius in the thin disc\n        using a sample of red giant stars\
@@ -47,10 +47,10 @@ tags:
 - 'Galaxy: disc'
 - 'Galaxy: evolution'
 - 'Galaxy: stellar content'
+journal: MNRAS
 doi: 10.1093/mnras/stad2374
 adsurl: https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.2141W
 adsnote: Provided by the SAO/NASA Astrophysics Data System
 publication_type: article
 bibcode: 2023MNRAS.526.2141W
-publishdate: '2023-10-11'
 ---
