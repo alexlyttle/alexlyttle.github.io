@@ -63,13 +63,17 @@ I wanted a way to automate adding my publications to the website. NASA provides 
 
         # Add AAS macros to latex2text
         macros = [
-            latex2text.MacroTextSpec(key, simplify_repl=value) for key, value in aas_macros.items()
+            latex2text.MacroTextSpec(
+                key, simplify_repl=value
+            ) for key, value in aas_macros.items()
         ]
         latex_context = latex2text.get_default_latex_context_db()
         latex_context.add_context_category("aas_macros", prepend=True, macros=macros)
 
         # Create latex_to_text function
-        latex_to_text = latex2text.LatexNodes2Text(latex_context=latex_context).latex_to_text
+        latex_to_text = latex2text.LatexNodes2Text(
+            latex_context=latex_context
+        ).latex_to_text
         ```
     
     - Get fields by their key name.
