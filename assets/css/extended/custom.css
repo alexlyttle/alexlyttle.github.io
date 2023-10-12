@@ -1,6 +1,11 @@
 :root {
     --theme: rgb(245, 245, 245);
     --code-bg: rgb(255, 255, 255);
+    --accent: rgb(66, 175, 250);
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .list {
@@ -37,6 +42,23 @@
     padding-top: 4px;
     padding-bottom: 4px;
 }
+
+.post-content a {
+    color: var(--accent);
+}
+
+.post-content code {
+    border-radius: 0px;
+}
+
+.post-content a code {
+    box-shadow: 0 -1px 0 var(--accent) inset;
+}
+
+.post-content pre {
+    border-radius: var(--radius);
+}
+
 /* Apply gradient animation to home */
 
 /* #home {
