@@ -1,5 +1,4 @@
 {{- define "main" }}
-{{ $maxAuthors := 5 }}
 
 <article class="post-single">
   <header class="post-header">
@@ -11,7 +10,7 @@
     </h1>
     {{- if .Params.authors }}
     <p>
-      {{ delimit .Params.authors ", " ", and " }}
+      {{ delimit .Params.authors ", " ", and " }}.
     </p>
     {{- end }}
     {{- if (or (isset .Params "bibcode") (isset .Params "doi")) }}
