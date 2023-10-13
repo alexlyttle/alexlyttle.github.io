@@ -84,21 +84,37 @@ def get_date(entry: Entry) -> str:
         month = "jan"
     return datetime.strptime(f"{year}-{month}", "%Y-%b").strftime("%Y-%m-%d")
 
+def get_categories(entry: Entry) -> list:
+    """So far only returns the article type as a category."""
+    category = entry.entry_type
+    if category.startswith("in"):
+        words = ["in", category[2:]]
+    elif category.endswith("thesis"):
+        words = [category[:-6], "thesis"]
+    elif category == "misc":
+        words = ["miscellaneous"]
+    elif category == "techreport":
+        words = ["technical", "report"]
+    else:
+        words = [category]
+    return [" ".join(word.capitalize() for word in words)]
+
 def get_metadata(entry: Entry) -> dict:
     """Get metadata from bibtex entry."""
     metadata = {
         "title": get_field(entry, "title"),
-        "authors": get_authors(entry),
+        "author": get_authors(entry),
         "date": get_date(entry),
-        "journal": get_field(entry, "journal"),
-        "abstract": get_field(entry, "abstract"),
+        "publishdate": datetime.now().strftime("%Y-%m-%d"),  # This is the date the file was created
+        "description": get_field(entry, "abstract"),
         "tags": get_tags(entry),
+        "categories": get_categories(entry),
+        "journal": get_field(entry, "journal"),
         "doi": get_field(entry, "doi"),
         "adsurl": get_field(entry, "adsurl"),
         "adsnote": get_field(entry, "adsnote"),
         "publication_type": entry.entry_type,
         "bibcode": entry.key,
-        "publishdate": datetime.now().strftime("%Y-%m-%d"),
     }
     return metadata
 

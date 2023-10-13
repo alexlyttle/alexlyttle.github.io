@@ -1,7 +1,7 @@
 ---
 title: 'Modelling stars with Gaussian Process Regression: augmenting stellar model
   grid'
-authors:
+author:
 - Tanda Li
 - Guy R. Davies
 - Alexander J. Lyttle
@@ -9,8 +9,8 @@ authors:
 - Lindsey M. Carboneau
 - "Rafael A. Garc\xEDa"
 date: '2022-04-01'
-journal: MNRAS
-abstract: "Grid-based modelling is widely used for estimating stellar parameters.\n\
+publishdate: '2023-10-13'
+description: "Grid-based modelling is widely used for estimating stellar parameters.\n\
   \        However, stellar model grid is sparse because of the\n        computational\
   \ cost. This paper demonstrates an application of a\n        machine-learning algorithm\
   \ using the Gaussian Process (GP)\n        Regression that turns a sparse model\
@@ -33,10 +33,12 @@ tags:
 - Astrophysics - Solar and Stellar Astrophysics
 - Astrophysics - Astrophysics of Galaxies
 - Astrophysics - Instrumentation and Methods for Astrophysics
+categories:
+- Article
+journal: MNRAS
 doi: 10.1093/mnras/stac467
 adsurl: https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.5597L
 adsnote: Provided by the SAO/NASA Astrophysics Data System
 publication_type: article
 bibcode: 2022MNRAS.511.5597L
-publishdate: '2023-10-11'
 ---

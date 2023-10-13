@@ -67,27 +67,14 @@
   {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">
-    {{ partial "post_type.html" . }}
+    <!-- Add list of categories -->
+    {{- if .Params.categories }}
+    <p>{{- delimit .Params.categories "&nbsp;&bull;&nbsp;" }}</p>
+    {{- end }}
     <h2>
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
-    {{- if .Params.authors }}
-    <p>
-      {{- $maxAuthors := 5 }}
-      {{- with .Params.authors }}
-        {{- $authorCount := len . }}
-        {{- range $index, $author := . }}
-          {{- if lt $index $maxAuthors }}
-            {{- if ne $index 0 }}, {{ end }}{{ if (and (eq $authorCount $maxAuthors) (eq $index (sub $authorCount 1))) }}and {{ end }}{{ $author }}
-          {{- else if eq $index $maxAuthors }}
-            et al
-          {{- end -}}
-        {{- end -}}
-        .
-      {{- end -}}
-    </p>
-    {{- end }}
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
@@ -96,7 +83,8 @@
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
+    <!-- Send dict to post_meta to say that this is a list page -->
+    {{- partial "post_meta.html" (dict "page" . "isList" true) -}}
   </footer>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>

@@ -3,31 +3,36 @@
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    {{ partial "post_type.html" . }}
+    {{- if .Params.categories }}
+    <!-- Add category buttons -->
+    <div class="post-categories">
+      {{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
+      <ul class="post-tags">
+        {{- range ($.GetTerms $categories) }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
     <h1 class="post-title">
       {{ .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
-    {{- if .Params.authors }}
-    <p>
-      {{ delimit .Params.authors ", " ", and " }}.
-    </p>
-    {{- end }}
     {{- if (or (isset .Params "bibcode") (isset .Params "doi")) }}
     <div class="post-badges">
       {{- if .Params.bibcode }}
-      <a href="https://ui.adsabs.harvard.edu/abs/{{ .Params.bibcode }}"><img src="https://img.shields.io/badge/NASA%20ADS-{{ .Params.bibcode }}-blue" alt="Bibcode {{ .Params.bibcode }}"></a>
+      <a href="https://ui.adsabs.harvard.edu/abs/{{ .Params.bibcode }}">
+        <img src="https://img.shields.io/badge/NASA_ADS-{{ replace .Params.bibcode "-" "--" }}-blue" alt="Bibcode {{ .Params.bibcode }}">
+      </a>
       {{- end }}
       {{- if .Params.doi }}
-      <a href="https://doi.org/{{ .Params.doi }}"><img src="https://img.shields.io/badge/DOI-{{ .Params.doi }}-red" alt="DOI {{ .Params.doi }}"></a>
-      <a href="https://juleskreuer.eu/projekte/citation-badge/"><img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ .Params.doi }}" alt="DOI {{ .Params.doi }}"></a>
+      <a href="https://doi.org/{{ .Params.doi }}">
+        <img src="https://img.shields.io/badge/DOI-{{ replace .Params.doi "-" "--" }}-yellow" alt="DOI {{ .Params.doi }}">
+      </a>
+      <a href="https://juleskreuer.eu/projekte/citation-badge/">
+        <img src="https://img.shields.io/endpoint?color=green&url=https%3A%2F%2Fapi.juleskreuer.eu%2Fcitation-badge.php%3Fdoi%3D{{ .Params.doi }}%26shield" alt="DOI {{ .Params.doi }}">
+      </a>
       {{- end }}
-    </div>
-    {{- end }}
-    {{- if .Params.abstract }}
-    <div class="post-abstract">
-      <h2>Abstract</h2>
-      <p>{{ .Params.abstract }}</p>
     </div>
     {{- end }}
     {{- if .Description }}
@@ -37,7 +42,8 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
+      <!-- Send dict to post_meta to say that this is not a list page -->
+      {{- partial "post_meta.html" (dict "page" . "isList" false) -}}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}

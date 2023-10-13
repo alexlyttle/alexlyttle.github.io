@@ -1,6 +1,6 @@
 ---
 title: 'TOI-257b (HD 19916b): a warm sub-saturn orbiting an evolved F-type star'
-authors:
+author:
 - Brett C. Addison
 - Duncan J. Wright
 - Belinda A. Nicholson
@@ -96,10 +96,10 @@ authors:
 - Victor Silva Aguirre
 - "Nathalie Theme\xDFl"
 date: '2021-04-01'
-journal: MNRAS
-abstract: "We report the discovery of a warm sub-Saturn, TOI-257b (HD 19916b),\n \
-  \       based on data from NASA's Transiting Exoplanet Survey Satellite\n      \
-  \  (TESS). The transit signal was detected by TESS and confirmed to\n        be\
+publishdate: '2023-10-13'
+description: "We report the discovery of a warm sub-Saturn, TOI-257b (HD 19916b),\n\
+  \        based on data from NASA's Transiting Exoplanet Survey Satellite\n     \
+  \   (TESS). The transit signal was detected by TESS and confirmed to\n        be\
   \ of planetary origin based on radial velocity observations. An\n        analysis\
   \ of the TESS photometry, the MINERVA-Australis, FEROS,\n        and HARPS radial\
   \ velocities, and the asteroseismic data of the\n        stellar oscillations reveals\
@@ -126,10 +126,12 @@ tags:
 - 'stars: individual (TIC 200723869/TOI-257)'
 - Astrophysics - Earth and Planetary Astrophysics
 - Astrophysics - Solar and Stellar Astrophysics
+categories:
+- Article
+journal: MNRAS
 doi: 10.1093/mnras/staa3960
 adsurl: https://ui.adsabs.harvard.edu/abs/2021MNRAS.502.3704A
 adsnote: Provided by the SAO/NASA Astrophysics Data System
 publication_type: article
 bibcode: 2021MNRAS.502.3704A
-publishdate: '2023-10-11'
 ---

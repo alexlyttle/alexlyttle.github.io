@@ -21,26 +21,11 @@ body {
     display: inline;
 }
 
-.post-abstract {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.post-entry .post-type {
-    margin-top: 2px;
-}
-
-.post-type {
+.post-categories {
     margin-top: 10px;
     margin-bottom: 5px;
     color: var(--secondary);
     font-size: small;
-}
-
-.post-type .button {
-    margin-left: 0;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 .post-content a {
