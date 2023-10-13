@@ -15,7 +15,7 @@ author:
 - Sarbani Basu
 - "Rafael A. Garc\xEDa"
 date: '2021-08-01'
-publishdate: '2023-10-12'
+publishdate: '2023-10-13'
 description: "With recent advances in modelling stars using high-precision\n     \
   \   asteroseismology, the systematic effects associated with our\n        assumptions\
   \ of stellar helium abundance (Y) and the mixing-\n        length theory parameter\
@@ -41,6 +41,8 @@ tags:
 - 'stars: fundamental parameters'
 - 'stars: statistics'
 - Astrophysics - Solar and Stellar Astrophysics
+categories:
+- Article
 journal: MNRAS
 doi: 10.1093/mnras/stab1368
 adsurl: https://ui.adsabs.harvard.edu/abs/2021MNRAS.505.2427L

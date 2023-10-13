@@ -96,7 +96,7 @@ author:
 - Victor Silva Aguirre
 - "Nathalie Theme\xDFl"
 date: '2021-04-01'
-publishdate: '2023-10-12'
+publishdate: '2023-10-13'
 description: "We report the discovery of a warm sub-Saturn, TOI-257b (HD 19916b),\n\
   \        based on data from NASA's Transiting Exoplanet Survey Satellite\n     \
   \   (TESS). The transit signal was detected by TESS and confirmed to\n        be\
@@ -126,6 +126,8 @@ tags:
 - 'stars: individual (TIC 200723869/TOI-257)'
 - Astrophysics - Earth and Planetary Astrophysics
 - Astrophysics - Solar and Stellar Astrophysics
+categories:
+- Article
 journal: MNRAS
 doi: 10.1093/mnras/staa3960
 adsurl: https://ui.adsabs.harvard.edu/abs/2021MNRAS.502.3704A

@@ -9,7 +9,7 @@ author:
 - Timothy R. Bedding
 - Alexander J. Lyttle
 date: '2023-11-01'
-publishdate: '2023-10-12'
+publishdate: '2023-10-13'
 description: "Young \u03B4 Scuti (Sct) stars have proven to be valuable\n        asteroseismic\
   \ targets, but obtaining robust uncertainties on\n        their inferred properties\
   \ is challenging. We aim to quantify the\n        random uncertainties in grid-based\
@@ -32,6 +32,8 @@ tags:
 - "stars: variables: \u03B4 Scuti"
 - Astrophysics - Solar and Stellar Astrophysics
 - Astrophysics - Instrumentation and Methods for Astrophysics
+categories:
+- Article
 journal: MNRAS
 doi: 10.1093/mnras/stad2621
 adsurl: https://ui.adsabs.harvard.edu/abs/2023MNRAS.525.5235S

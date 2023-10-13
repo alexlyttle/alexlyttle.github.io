@@ -9,7 +9,7 @@ author:
 - Lindsey M. Carboneau
 - "Rafael A. Garc\xEDa"
 date: '2022-04-01'
-publishdate: '2023-10-12'
+publishdate: '2023-10-13'
 description: "Grid-based modelling is widely used for estimating stellar parameters.\n\
   \        However, stellar model grid is sparse because of the\n        computational\
   \ cost. This paper demonstrates an application of a\n        machine-learning algorithm\
@@ -33,6 +33,8 @@ tags:
 - Astrophysics - Solar and Stellar Astrophysics
 - Astrophysics - Astrophysics of Galaxies
 - Astrophysics - Instrumentation and Methods for Astrophysics
+categories:
+- Article
 journal: MNRAS
 doi: 10.1093/mnras/stac467
 adsurl: https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.5597L
