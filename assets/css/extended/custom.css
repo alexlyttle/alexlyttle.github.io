@@ -44,6 +44,14 @@ body {
     border-radius: var(--radius);
 }
 
+.list:not(.dark)::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+.list:not(.dark)::-webkit-scrollbar-thumb {
+    border: 5px solid var(--theme);
+}
+
 /* Apply gradient animation to home */
 
 /* #home {
