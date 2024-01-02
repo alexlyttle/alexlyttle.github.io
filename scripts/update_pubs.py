@@ -5,7 +5,9 @@ from datetime import datetime
 
 # Set constants
 # TODO: Add argument parser to script
-ORCID = "0000-0001-8355-8082"
+QUERY = {
+    "q": "docs(library/P5v-VYFUSjiw1c_tQ210LQ)",  # set this to your library
+}
 MACROS_PATH = "data/aas_macros.json"
 ROWS = 50
 PUB_DIR = "content/publications"
@@ -34,10 +36,12 @@ def publication_exists(bibcode: str) -> bool:
     # This assumes the citation key is the same as the bibcode
     return os.path.exists(os.path.join(PUB_DIR, f"{bibcode}.md"))
 
-def export_bibtex(orcid: str) -> str:
+def export_bibtex(query: str) -> str:
     """Export bibtext file for search result from ADS."""
-    search_query = ads.SearchQuery(fl=["bibcode"], orcid=orcid, rows=ROWS)
+    search_query = ads.SearchQuery(fl=["bibcode"], rows=ROWS, **query)
     publications = [row for row in search_query if not publication_exists(row.bibcode)]
+    if len(publications) == 0:
+        return ""
     bibcodes = [pub.bibcode for pub in publications]
     fmt = "bibtexabs"
     ads.ExportQuery.FORMATS.append(fmt)  # hack to add to valid formats
@@ -127,7 +131,7 @@ def create_publication(filename: str, metadata: dict):
 
 def main():
     """Main function."""
-    bibtex = export_bibtex(ORCID)
+    bibtex = export_bibtex(QUERY)
     library = bibtexparser.parse_string(bibtex)
     for entry in library.entries:
         metadata = get_metadata(entry)
