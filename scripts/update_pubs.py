@@ -76,7 +76,8 @@ def get_tags(entry: Entry) -> list:
     text = get_field(entry, "keywords")
     if text is None:
         return []
-    return text.split(", ")
+    # Remove digits from keywords
+    return [keyword for keyword in text.split(", ") if not keyword.isdigit()]
 
 def get_date(entry: Entry) -> str:
     """Get date from bibtex entry or return empty string if not found."""
