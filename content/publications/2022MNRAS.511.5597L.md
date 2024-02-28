@@ -9,7 +9,7 @@ author:
 - Lindsey M. Carboneau
 - "Rafael A. Garc\xEDa"
 date: '2022-04-01'
-publishdate: '2023-10-13'
+publishdate: '2024-02-28'
 description: "Grid-based modelling is widely used for estimating stellar parameters.\n\
   \        However, stellar model grid is sparse because of the\n        computational\
   \ cost. This paper demonstrates an application of a\n        machine-learning algorithm\

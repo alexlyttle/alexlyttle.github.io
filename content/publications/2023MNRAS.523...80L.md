@@ -8,7 +8,7 @@ author:
 - Margarida S. Cunha
 - Alexander J. Lyttle
 date: '2023-07-01'
-publishdate: '2023-10-13'
+publishdate: '2024-02-28'
 description: "The detailed modelling of stellar oscillations is a powerful approach\
   \ to\n        characterizing stars. However, poor treatment of systematics in\n\
   \        theoretical models leads to misinterpretations of stars. Here,\n      \

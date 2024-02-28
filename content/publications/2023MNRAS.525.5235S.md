@@ -9,7 +9,7 @@ author:
 - Timothy R. Bedding
 - Alexander J. Lyttle
 date: '2023-11-01'
-publishdate: '2023-10-13'
+publishdate: '2024-02-28'
 description: "Young \u03B4 Scuti (Sct) stars have proven to be valuable\n        asteroseismic\
   \ targets, but obtaining robust uncertainties on\n        their inferred properties\
   \ is challenging. We aim to quantify the\n        random uncertainties in grid-based\

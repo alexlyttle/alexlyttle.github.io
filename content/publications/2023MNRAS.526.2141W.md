@@ -14,7 +14,7 @@ author:
 - Giada Casali
 - Valeria Grisoni
 date: '2023-12-01'
-publishdate: '2023-10-13'
+publishdate: '2024-02-28'
 description: "The radial metallicity distribution of the Milky Way's disc is an\n\
   \        important observational constraint for models of the formation\n      \
   \  and evolution of our Galaxy. It informs our understanding of the\n        chemical\

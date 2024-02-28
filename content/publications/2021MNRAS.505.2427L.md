@@ -15,7 +15,7 @@ author:
 - Sarbani Basu
 - "Rafael A. Garc\xEDa"
 date: '2021-08-01'
-publishdate: '2023-10-13'
+publishdate: '2024-02-28'
 description: "With recent advances in modelling stars using high-precision\n     \
   \   asteroseismology, the systematic effects associated with our\n        assumptions\
   \ of stellar helium abundance (Y) and the mixing-\n        length theory parameter\
