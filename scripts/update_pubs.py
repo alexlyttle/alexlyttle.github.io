@@ -11,6 +11,7 @@ QUERY = {
 MACROS_PATH = "data/aas_macros.json"
 ROWS = 50
 PUB_DIR = "content/publications"
+OVERWRITE = False
 
 # Check publication directory exists
 if not os.path.isdir(PUB_DIR):
@@ -39,7 +40,10 @@ def publication_exists(bibcode: str) -> bool:
 def export_bibtex(query: str) -> str:
     """Export bibtext file for search result from ADS."""
     search_query = ads.SearchQuery(fl=["bibcode"], rows=ROWS, **query)
-    publications = [row for row in search_query if not publication_exists(row.bibcode)]
+    if OVERWRITE:
+        publications = [row for row in search_query]
+    else:
+        publications = [row for row in search_query if not publication_exists(row.bibcode)]
     if len(publications) == 0:
         return ""
     bibcodes = [pub.bibcode for pub in publications]
