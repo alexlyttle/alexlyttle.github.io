@@ -25,5 +25,5 @@
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}
-<p>{{- delimit . "&nbsp;&bull;&nbsp;" -}}</p>
+{{- delimit . "&nbsp;&bull;&nbsp;" | safeHTML -}}
 {{- end -}}
